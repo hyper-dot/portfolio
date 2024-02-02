@@ -1,12 +1,10 @@
 import Logo from "@/components/Logo";
-import RandomText from "@/components/Random";
 import BlogSection from "@/components/home/Blog";
 import { Button } from "@/components/ui/button";
 
 const page = () => {
   return (
     <>
-      <RandomText />
       <div className="max-w-2xl px-2 mx-auto">
         <div className="py-12">
           <div className="relative mx-auto text-center">
