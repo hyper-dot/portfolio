@@ -1,10 +1,12 @@
 import Logo from "@/components/Logo";
+import RandomText from "@/components/Random";
 import BlogSection from "@/components/home/Blog";
 import { Button } from "@/components/ui/button";
 
 const page = () => {
   return (
     <>
+      <RandomText />
       <div className="max-w-2xl px-2 mx-auto">
         <div className="py-12">
           <div className="relative mx-auto text-center">
@@ -19,9 +21,9 @@ const page = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <img
-                  src="https://placekitten.com/400/400" // Replace with your profile image URL
+                  src="/pp.png" // Replace with your profile image URL
                   alt="Profile"
-                  className="w-full h-auto rounded-lg"
+                  className="w-full bg-white h-auto rounded-lg"
                 />
               </div>
               <div className="text-left">

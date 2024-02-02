@@ -36,26 +36,25 @@ const Navbar = () => {
     <>
       <nav className="p-4 hidden md:block">
         <div className="max-w-3xl gap-8 mx-auto flex justify-center items-center">
-          {menus.map(
-            (m, idx) =>
-              m.href !== "/" && (
-                <Link
-                  href={m.href}
-                  className="hover:text-muted-foreground transition inline-flex gap-1 items-center  duration-300"
-                >
-                  {m.icon}
-                  {m.title}
-                </Link>
-              ),
-          )}
+          {menus.map((m, idx) => (
+            <Link
+              key={idx}
+              href={m.href}
+              className="hover:text-muted-foreground transition inline-flex gap-1 items-center  duration-300"
+            >
+              {m.icon}
+              {m.title}
+            </Link>
+          ))}
           <ThemeSwitcher />
         </div>
       </nav>
 
       <nav className="md:hidden w-full h-16 bottom-0 fixed z-10">
         <div className="w-full justify-around backdrop-blur-xl px-4 h-full items-center flex">
-          {menus.map((m) => (
+          {menus.map((m, idx) => (
             <div
+              key={idx}
               className={`w-12 flex items-center justify-center h-12 rounded-full  ${pathname === m.href && "bg-primary-foreground"}`}
             >
               <Link href={m.href}>{m.icon}</Link>
