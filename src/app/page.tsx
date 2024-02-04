@@ -52,7 +52,7 @@ const page = () => {
           <h2 className="text-2xl font-bold">
             Latest Blog Posts
             <Link
-              href="/blogs"
+              href="/blogs/1"
               className="pl-4 text-sm transition-all duration-200 inline-flex gap-2 items-center font-medium underline underline-offset-4 hover:text-blue-600"
             >
               <ArrowUpRightFromSquare size={16} /> All Blogs
