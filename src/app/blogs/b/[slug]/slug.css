@@ -31,10 +31,6 @@
     @apply bg-[#1e1e1e] px-0 mx-0 text-white p-[2px] rounded-[4px];
   }
 
-  p {
-    @apply my-4;
-  }
-
   ol {
     @apply list-decimal list-inside pl-4;
   }
@@ -44,10 +40,10 @@
   }
 
   img {
-    @apply w-full rounded-xl max-h-[400px] object-cover;
+    @apply max-w-full rounded-xl;
   }
 
   blockquote {
-    @apply border-l-[5px] pl-4 my-8 border-muted-foreground bg-muted p-2 rounded-r-[8px];
+    @apply border-l-[5px] pl-4 border-muted-foreground bg-muted p-2 rounded-r-[8px];
   }
 }

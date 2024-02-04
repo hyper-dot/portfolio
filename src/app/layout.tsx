@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import Navbar from "@/components/Nav";
 import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
+import { Toaster } from "sonner";
 
 const ProgressBar = dynamic(() => import("@/components/ProgressBar"), {
   ssr: false,
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`custom-scrollbar ${inter.className}`}>
+      <body className={`custom-scrollbar min-h-screen ${inter.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -34,6 +35,7 @@ export default function RootLayout({
           <ProgressBar />
           <Navbar />
           {children}
+          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>

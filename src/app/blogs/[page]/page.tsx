@@ -9,12 +9,20 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import Blog from "@/server/models/blog.model";
+import { connectdb } from "@/server/utils/connectdb";
 
-const page = () => {
+const page = async ({ params }: { params: { page: string } }) => {
+  const { page } = params;
+
+  await connectdb();
+  const blogs = await Blog.find();
+  console.log(blogs);
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-bold px-4">All Blogs</h2>
-      <BlogSection />
+      <BlogSection data={blogs} />
       <Pagination className="py-4">
         <PaginationContent>
           <PaginationItem>
