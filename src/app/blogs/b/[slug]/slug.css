@@ -42,4 +42,12 @@
   ul {
     @apply list-disc list-inside pl-4;
   }
+
+  img {
+    @apply w-full rounded-xl max-h-[400px] object-cover;
+  }
+
+  blockquote {
+    @apply border-l-[5px] pl-4 my-8 border-muted-foreground bg-muted p-2 rounded-r-[8px];
+  }
 }

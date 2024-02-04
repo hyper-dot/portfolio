@@ -22,12 +22,8 @@ const page = ({ params }: { params: { slug: string } }) => {
           </div>
         </div>
       </div>
-      <img
-        src="/ai.webp"
-        alt="security image"
-        className="w-full md:h-[400px] rounded-xl object-cover"
-      />
       <div className="blog">
+        <img src="/ai.webp" alt="security image" />
         <h1>This is title text</h1>
         <img src="blog-cover-image.jpg" alt="Blog Cover" className="image" />
         <div className="content">
@@ -100,6 +96,21 @@ const page = ({ params }: { params: { slug: string } }) => {
               <li>Orange</li>
             </ul>
           </div>
+
+          <blockquote cite="http://www.worldwildlife.org/who/index.html">
+            For 50 years, WWF has been protecting the future of nature. The
+            world's leading conservation organization, WWF works in 100
+            countries and is supported by 1.2 million members in the United
+            States and close to 5 million globally.
+          </blockquote>
+
+          <blockquote>
+            <p>
+              "The only way to do great work is to love what you do. If you
+              haven't found it yet, keep looking. Don't settle."
+            </p>
+            <cite>- Steve Jobs</cite>
+          </blockquote>
 
           <pre>
             <code>
