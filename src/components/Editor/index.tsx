@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import "./editor.css";
 import createDOMPurify from "dompurify";
 import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
