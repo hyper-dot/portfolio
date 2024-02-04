@@ -40,7 +40,7 @@ const Navbar = () => {
             <Link
               key={idx}
               href={m.href}
-              className="hover:text-muted-foreground transition inline-flex gap-1 items-center  duration-300"
+              className="link relative hover:text-muted-foreground transition inline-flex gap-1 items-center  duration-300"
             >
               {m.icon}
               {m.title}

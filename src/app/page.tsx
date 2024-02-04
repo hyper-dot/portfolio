@@ -1,6 +1,8 @@
 import Logo from "@/components/Logo";
-import BlogSection from "@/components/home/Blog";
+import BlogSection from "@/components/BlogContainer";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowUpRightFromSquare } from "lucide-react";
 
 const page = () => {
   return (
@@ -44,6 +46,18 @@ const page = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="px-2">
+          <h2 className="text-2xl font-bold">
+            Latest Blog Posts
+            <Link
+              href="/blogs"
+              className="pl-4 text-sm transition-all duration-200 inline-flex gap-2 items-center font-medium underline underline-offset-4 hover:text-blue-600"
+            >
+              <ArrowUpRightFromSquare size={16} /> All Blogs
+            </Link>
+          </h2>
         </div>
 
         <BlogSection />

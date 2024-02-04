@@ -31,8 +31,6 @@
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
-
-    --radius: 0.5rem;
   }
 
   .dark {
@@ -131,5 +129,3 @@ body::-webkit-scrollbar-track {
   @apply bg-primary-foreground;
   /* Change the color of the track */
 }
-
-/* .................................... Gradient Background ...................................... */
