@@ -4,13 +4,6 @@ import * as React from "react";
 import { Moon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
 export default function ThemeSwitcher() {
   const { setTheme } = useTheme();
 

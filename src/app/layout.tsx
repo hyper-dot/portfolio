@@ -4,6 +4,11 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Navbar from "@/components/Nav";
 import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+
+const ProgressBar = dynamic(() => import("@/components/ProgressBar"), {
+  ssr: false,
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`custom-scrollbar ${inter.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <ProgressBar />
           <Navbar />
           {children}
           <Footer />

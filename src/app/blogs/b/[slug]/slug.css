@@ -1,0 +1,45 @@
+.blog {
+  h1 {
+    @apply text-4xl font-semibold my-4;
+  }
+
+  h2 {
+    @apply text-3xl font-medium my-3;
+  }
+
+  h3 {
+    @apply text-2xl font-medium my-2;
+  }
+
+  h4 {
+    @apply text-xl my-2 font-semibold;
+  }
+
+  pre {
+    @apply bg-[#1e1e1e] overflow-auto px-0 mx-0 rounded-[4px] my-4;
+  }
+
+  pre::-webkit-scrollbar {
+    @apply bg-transparent rounded-[4px] h-3;
+  }
+
+  pre::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground rounded-[4px];
+  }
+
+  code {
+    @apply bg-[#1e1e1e] px-0 mx-0 text-white p-[2px] rounded-[4px];
+  }
+
+  p {
+    @apply my-4;
+  }
+
+  ol {
+    @apply list-decimal list-inside pl-4;
+  }
+
+  ul {
+    @apply list-disc list-inside pl-4;
+  }
+}
