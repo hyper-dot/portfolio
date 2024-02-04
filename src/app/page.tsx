@@ -21,7 +21,7 @@ const page = () => {
                 <img
                   src="/pp.png" // Replace with your profile image URL
                   alt="Profile"
-                  className="w-full bg-white h-auto rounded-lg"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
               <div className="text-left">

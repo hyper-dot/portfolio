@@ -1,4 +1,5 @@
-import { MoveRight } from "lucide-react";
+import Link from "next/link";
+import { MoveRight, ArrowUpRightFromSquare } from "lucide-react";
 
 const BlogSection = () => {
   const blogPosts = [
@@ -39,7 +40,15 @@ const BlogSection = () => {
   return (
     <div className="py-10">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold">Latest Blog Posts</h2>
+        <h2 className="text-2xl font-bold">
+          Latest Blog Posts
+          <Link
+            href="/blogs"
+            className="pl-4 text-sm transition-all duration-200 inline-flex gap-2 items-center font-medium underline underline-offset-4 hover:text-blue-600"
+          >
+            <ArrowUpRightFromSquare size={16} /> All Blogs
+          </Link>
+        </h2>
         <div className="flex flex-col mt-6">
           {blogPosts.map((post) => (
             <>

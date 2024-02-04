@@ -51,7 +51,7 @@ const Navbar = () => {
       </nav>
 
       <nav className="md:hidden w-full h-16 bottom-0 fixed z-10">
-        <div className="w-full justify-around backdrop-blur-xl px-4 h-full items-center flex">
+        <div className="w-full justify-around backdrop-blur-xl px-4 h-full items-center flex bg-[rgba(0,0,0,0.1)] dark:bg-[rgba(255,255,255,0.1)]">
           {menus.map((m, idx) => (
             <div
               key={idx}
@@ -60,6 +60,7 @@ const Navbar = () => {
               <Link href={m.href}>{m.icon}</Link>
             </div>
           ))}
+          <ThemeSwitcher />
         </div>
       </nav>
     </>
