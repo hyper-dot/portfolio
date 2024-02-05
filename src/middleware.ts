@@ -4,6 +4,10 @@ export async function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
   const pathName = req.nextUrl.pathname;
 
+  // ignore images path
+  if (/\.(png|svg|jpg|webp)$/.test(pathName)) return;
+
+  // Authenctication for admin path
   if (pathName.startsWith("/admin")) {
     if (token) {
       const res = await verifyJwtToken(token);
