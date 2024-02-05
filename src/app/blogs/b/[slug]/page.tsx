@@ -2,6 +2,7 @@ import { Calendar, User } from "lucide-react";
 import React from "react";
 import "./slug.css";
 import Blog from "@/server/models/blog.model";
+import { connectdb } from "@/server/utils/connectdb";
 
 import dynamic from "next/dynamic";
 const RichContentPreview = dynamic(
@@ -12,6 +13,7 @@ const RichContentPreview = dynamic(
 const page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
 
+  await connectdb();
   const blog = await Blog.findOne({ slug });
 
   return (
