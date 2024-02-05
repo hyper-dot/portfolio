@@ -28,11 +28,11 @@
   }
 
   .ql-syntax {
-    @apply p-2 text-sm;
+    @apply p-2 text-sm text-white;
   }
 
   code {
-    @apply bg-[#1e1e1e] text-white p-[2px] rounded-[4px];
+    @apply bg-[#1e1e1e] p-[2px] rounded-[4px];
   }
 
   ol {
@@ -44,10 +44,10 @@
   }
 
   img {
-    @apply max-w-full rounded-xl;
+    @apply max-w-full rounded-[4px];
   }
 
   blockquote {
-    @apply border-l-[5px] pl-4 border-muted-foreground bg-muted p-2 rounded-r-[8px];
+    @apply border-l-[5px] pl-4 border-muted-foreground bg-muted p-2 rounded-r-[4px];
   }
 }
