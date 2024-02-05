@@ -24,7 +24,7 @@
   }
 
   pre::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground rounded-[4px];
+    @apply text-white bg-muted-foreground rounded-[4px];
   }
 
   code {
