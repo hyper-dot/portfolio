@@ -3,29 +3,29 @@ import Link from "next/link";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { Briefcase, UserRound, Mail, Home } from "lucide-react";
 import { usePathname } from "next/navigation";
-import path from "node:path/win32";
+import { cn } from "@/lib/utils";
 
 const menus = [
   {
     title: "Home",
-    icon: <Home size={20} strokeWidth={1} />,
+    icon: <Home size={16} />,
     href: "/",
   },
   {
     title: "About",
-    icon: <UserRound size={20} strokeWidth={1} />,
+    icon: <UserRound size={16} />,
     href: "/about",
   },
 
   {
     title: "Portfolio",
-    icon: <Briefcase size={20} strokeWidth={1} />,
+    icon: <Briefcase size={16} />,
     href: "/portfolio",
   },
 
   {
     title: "Contact",
-    icon: <Mail size={20} strokeWidth={1} />,
+    icon: <Mail size={16} />,
     href: "/contact",
   },
 ];
@@ -40,7 +40,10 @@ const Navbar = () => {
             <Link
               key={idx}
               href={m.href}
-              className="link relative hover:text-muted-foreground transition inline-flex gap-1 items-center  duration-300"
+              className={cn(
+                "link text-sm font-medium relative text-muted-foreground hover:text-foreground transition inline-flex gap-1 items-center duration-300",
+                pathname === m.href && "text-foreground",
+              )}
             >
               {m.icon}
               {m.title}

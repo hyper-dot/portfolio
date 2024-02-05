@@ -13,7 +13,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="max-w-3xl mx-auto px-2">
-      <div className="mt-20 mb-10">
+      <div className="mt-10 mb-10">
         <h1 className="text-4xl font-semibold text-center">{blog.title}</h1>
         <div className="flex justify-center my-8 gap-4">
           <div className="flex gap-2 items-center">

@@ -11,11 +11,13 @@ export default function ThemeSwitcher() {
     <button className="bg-none outline-none ring-transparent">
       <SunIcon
         onClick={() => setTheme("light")}
+        size={20}
         strokeWidth={1}
         className="hidden dark:inline"
       />
       <Moon
         onClick={() => setTheme("dark")}
+        size={20}
         strokeWidth={1}
         className="inline dark:hidden"
       />
