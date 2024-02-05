@@ -3,12 +3,7 @@ import React from "react";
 import "./slug.css";
 import Blog from "@/server/models/blog.model";
 import { connectdb } from "@/server/utils/connectdb";
-
-import dynamic from "next/dynamic";
-const RichContentPreview = dynamic(
-  () => import("@/components/Editor/Preview"),
-  { ssr: false },
-);
+import "highlight.js/styles/github-dark.css";
 
 const page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
@@ -31,9 +26,10 @@ const page = async ({ params }: { params: { slug: string } }) => {
           </div>
         </div>
       </div>
-      <div className="blog">
-        <RichContentPreview html={blog.body} />
-      </div>
+      <div
+        className="blog"
+        dangerouslySetInnerHTML={{ __html: blog.body }}
+      ></div>
     </div>
   );
 };

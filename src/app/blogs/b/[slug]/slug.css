@@ -24,11 +24,15 @@
   }
 
   pre::-webkit-scrollbar-thumb {
-    @apply text-white bg-muted-foreground rounded-[4px];
+    @apply text-white bg-muted-foreground rounded-[4px] px-2;
+  }
+
+  .ql-syntax {
+    @apply p-2 text-sm;
   }
 
   code {
-    @apply bg-[#1e1e1e] px-0 mx-0 text-white p-[2px] rounded-[4px];
+    @apply bg-[#1e1e1e] text-white p-[2px] rounded-[4px];
   }
 
   ol {
