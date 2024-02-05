@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowUpRightFromSquare } from "lucide-react";
 import Blog from "@/server/models/blog.model";
+import { connectdb } from "@/server/utils/connectdb";
 
 const page = async () => {
+  await connectdb();
   const blogs = await Blog.find().sort({ createdAt: -1 }).limit(3);
   return (
     <>
