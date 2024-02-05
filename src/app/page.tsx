@@ -3,8 +3,10 @@ import BlogSection from "@/components/BlogContainer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowUpRightFromSquare } from "lucide-react";
+import Blog from "@/server/models/blog.model";
 
-const page = () => {
+const page = async () => {
+  const blogs = await Blog.find().sort({ createdAt: -1 }).limit(3);
   return (
     <>
       <div className="max-w-2xl px-2 mx-auto">
@@ -60,7 +62,7 @@ const page = () => {
           </h2>
         </div>
 
-        <BlogSection />
+        <BlogSection data={blogs} />
       </div>
     </>
   );
