@@ -4,6 +4,8 @@ import "./slug.css";
 import Blog from "@/server/models/blog.model";
 import { connectdb } from "@/server/utils/connectdb";
 import "highlight.js/styles/github-dark.css";
+import SocialShareBtn from "@/components/SocialShareBtn";
+import BackButton from "@/components/BackButton";
 
 const page = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
@@ -13,7 +15,11 @@ const page = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="max-w-3xl mx-auto px-2">
-      <div className="mt-10 mb-10">
+      <div className="mt-4 mb-10">
+        <div className="mb-8 px-5">
+          <BackButton />
+        </div>
+
         <h1 className="text-4xl font-semibold text-center">{blog.title}</h1>
         <div className="flex justify-center my-8 gap-4">
           <div className="flex gap-2 items-center">
@@ -25,11 +31,19 @@ const page = async ({ params }: { params: { slug: string } }) => {
             <span>21 Dec 2024</span>
           </div>
         </div>
+        <div className="flex justify-center flex-col items-center">
+          <SocialShareBtn url="https://rosanpaudel.com.np" />
+          <span className="text-xs">Share this article in social media</span>
+        </div>
       </div>
       <div
         className="blog"
         dangerouslySetInnerHTML={{ __html: blog.body }}
       ></div>
+      <div className="py-8 flex items-center flex-col justify-center">
+        <span className="text-xs">Share this article in social media</span>
+        <SocialShareBtn url="https://rosanpaudel.com.np" />
+      </div>
     </div>
   );
 };
