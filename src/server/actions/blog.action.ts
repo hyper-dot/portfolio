@@ -39,3 +39,23 @@ export const addNewBlog = async (data: any) => {
     return { success: false, message: "Not valid data." };
   }
 };
+
+export async function generateDummyBlogs() {
+  try {
+    // Loop to generate 30 dummy blogs
+    for (let i = 1; i <= 30; i++) {
+      const dummyBlog = new Blog({
+        title: `Dummy Blog ${i}`,
+        desc: `Description for Dummy Blog ${i}`,
+        keywords: `Keyword${i}, Keyword${i + 1}`,
+        body: `Body content for Dummy Blog ${i}`,
+        slug: `dummy-blog-${i}`,
+      });
+
+      await dummyBlog.save();
+      console.log(`Dummy Blog ${i} created successfully.`);
+    }
+  } catch (error) {
+    console.error("Error generating dummy blogs:", error);
+  }
+}
