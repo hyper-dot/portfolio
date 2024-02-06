@@ -56,7 +56,7 @@ const page = async () => {
           <h2 className="text-2xl font-bold">
             Latest Blog Posts
             <Link
-              href="/blogs/1"
+              href="/blogs"
               className="pl-4 text-sm transition-all duration-200 inline-flex gap-2 items-center font-medium hover:underline underline-offset-4"
             >
               <ArrowUpRightFromSquare size={16} /> All Blogs

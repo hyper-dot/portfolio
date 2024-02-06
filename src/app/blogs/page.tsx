@@ -32,7 +32,11 @@ const page = async ({
 
     if (totalPages === 0) {
       // Handle case when there are no blogs available
-      return <div>No blogs available.</div>;
+      return (
+        <div className="text-center h-[80vh] flex items-center justify-center">
+          No blogs available.
+        </div>
+      );
     }
 
     const currentPage = Number(page);
@@ -88,7 +92,11 @@ const page = async ({
   } catch (error) {
     // Handle errors gracefully
     console.error("Error in page component:", error);
-    return <div>Something went wrong. Please try again later.</div>;
+    return (
+      <div className="text-center h-[80vh] flex items-center justify-center">
+        Something went wrong. Please try again later.
+      </div>
+    );
   }
 };
 
