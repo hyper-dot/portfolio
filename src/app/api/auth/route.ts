@@ -41,7 +41,7 @@ export const POST = async (req: NextRequest) => {
         const response = NextResponse.json("Logged in successfully.", {
           status: 200,
         });
-        response.cookies.set("token", token, {
+        response.cookies.set("_portfolio_jwt", token, {
           httpOnly: true,
           maxAge: 60 * 60 * 2, // 2 hours in seconds
         });

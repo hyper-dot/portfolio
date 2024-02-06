@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyJwtToken } from "./server/utils/auth";
 export async function middleware(req: NextRequest) {
-  const token = req.cookies.get("token")?.value;
+  const token = req.cookies.get("_portfolio_jwt")?.value;
   const pathName = req.nextUrl.pathname;
 
   // ignore images path
@@ -17,6 +17,7 @@ export async function middleware(req: NextRequest) {
     }
     return NextResponse.redirect(req.nextUrl.origin);
   }
+  return NextResponse.next();
 }
 
 export const config = {
