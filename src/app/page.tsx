@@ -20,7 +20,9 @@ const page = async () => {
                 <Logo />
               </div>
             </h1>
-            <p className="md:text-lg mb-8">Fullsatck Web Developer</p>
+            <p className="md:text-base mb-8 font-medium">
+              Full-Satck Web Developer
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -33,12 +35,12 @@ const page = async () => {
               <div className="text-left">
                 <h2 className="text-2xl font-bold  mb-4">About Me</h2>
                 <p className=" mb-4">
-                  Hello! I'm a passionate web developer and designer with a
-                  focus on creating user-friendly and visually appealing
-                  websites. I love turning ideas into reality through code and
-                  design.
+                  Hello! I'm a passionate <strong>Fullstack</strong> web
+                  developer & <strong>FOSS lover</strong> with a focus on
+                  creating user-friendly and robust web apps. I love turning
+                  ideas into reality through code.
                 </p>
-                <p className=" mb-4">
+                <p className="mb-4 text-sm">
                   Feel free to explore my portfolio and reach out if you have
                   any questions or collaboration opportunities.
                 </p>

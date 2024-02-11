@@ -21,15 +21,11 @@ const page = async ({
   const headersList = headers();
   const prevUrl = headersList.get("referer");
 
-  console.log();
   try {
     const { next, page = 1 } = searchParams;
-
     await connectdb();
-
     const count = await Blog.countDocuments();
     const totalPages = Math.ceil(count / 10);
-
     if (totalPages === 0) {
       // Handle case when there are no blogs available
       return (
@@ -40,7 +36,6 @@ const page = async ({
     }
 
     const currentPage = Number(page);
-
     const blogsQuery = next
       ? Blog.find({ _id: { $lt: next } })
         .sort({ _id: -1 })
@@ -48,7 +43,6 @@ const page = async ({
       : Blog.find().sort({ _id: -1 }).limit(10);
 
     const blogs = await blogsQuery;
-
     const nextPointer = blogs.length > 0 ? blogs[blogs.length - 1]._id : null;
 
     return (
@@ -90,13 +84,7 @@ const page = async ({
       </div>
     );
   } catch (error) {
-    // Handle errors gracefully
     console.error("Error in page component:", error);
-    return (
-      <div className="text-center h-[80vh] flex items-center justify-center">
-        Something went wrong. Please try again later.
-      </div>
-    );
   }
 };
 
