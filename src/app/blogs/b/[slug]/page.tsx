@@ -7,6 +7,24 @@ import "highlight.js/styles/github-dark.css";
 import SocialShareBtn from "@/components/SocialShareBtn";
 import BackButton from "@/components/BackButton";
 
+// or Dynamic metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  await connectdb();
+  const blog = await Blog.findOne({ slug: params.slug });
+  return {
+    title: blog.title,
+    referrer: "origin-when-cross-origin",
+    description: blog.desc,
+    authors: [{ name: "Roshan Paudel", url: "https://rosanpaudel.com.np" }],
+    keywords: blog.keywords,
+    creator: "Roshan Paudel",
+  };
+}
+
 const page = async ({ params }: { params: { slug: string } }) => {
   try {
     const { slug } = params;
@@ -39,7 +57,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
         ></div>
         <div className="py-8 flex items-center flex-col justify-center">
           <span className="text-xs">Share this article in social media</span>
-          <SocialShareBtn url="https://rosanpaudel.com.np" />
+          <SocialShareBtn url={`https://rosanpaudel.com.np/blogs/b/${slug}`} />
         </div>
       </div>
     );

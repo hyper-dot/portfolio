@@ -12,6 +12,12 @@ import Blog from "@/server/models/blog.model";
 import { connectdb } from "@/server/utils/connectdb";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blogs || Roshan Paudel",
+  description: "Blogs written by Roshan Paudel Nepal.",
+};
 
 const page = async ({
   searchParams,
