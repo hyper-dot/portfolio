@@ -20,7 +20,7 @@
   }
 
   pre::-webkit-scrollbar {
-    @apply bg-transparent rounded-[4px] h-3;
+    @apply bg-transparent rounded-[4px] h-2;
   }
 
   pre::-webkit-scrollbar-thumb {

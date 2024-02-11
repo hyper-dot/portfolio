@@ -6,8 +6,11 @@ import { MoveLeft } from "lucide-react";
 const BackButton = () => {
   const router = useRouter();
   return (
-    <button className="flex gap-2" onClick={() => router.back()}>
-      <MoveLeft />
+    <button
+      className="flex gap-2 text-muted-foreground hover:text-primary transition-all duration-200 text-sm items-center"
+      onClick={() => router.back()}
+    >
+      <MoveLeft strokeWidth={1} />
       Go Back
     </button>
   );
