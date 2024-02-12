@@ -6,6 +6,7 @@ import Navbar from "@/components/Nav";
 import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
 import { Toaster } from "@/components/ui/toaster";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const ProgressBar = dynamic(() => import("@/components/ProgressBar"), {
   ssr: false,
@@ -28,17 +29,14 @@ export default function RootLayout({
       <body
         className={`custom-scrollbar pb-20 md:pb-0 min-h-screen ${inter.className}`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ProgressBar />
           <Navbar />
           {children}
           <Toaster />
           <Footer />
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-PVJCEKSNN8" />
       </body>
     </html>
   );
