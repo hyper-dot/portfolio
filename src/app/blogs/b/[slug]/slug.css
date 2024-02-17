@@ -40,7 +40,11 @@
   }
 
   ul {
-    @apply list-disc list-inside pl-4;
+    @apply list-disc list-inside pl-4 py-4;
+  }
+
+  li {
+    @apply py-2;
   }
 
   img {
@@ -48,6 +52,6 @@
   }
 
   blockquote {
-    @apply border-l-[5px] pl-4 border-muted-foreground bg-muted p-2 rounded-r-[4px];
+    @apply border-l-[5px] pl-4 border-muted-foreground bg-muted p-2 rounded-r-[4px] my-8;
   }
 }

@@ -1,10 +1,11 @@
 import Logo from "@/components/Logo";
 import BlogSection from "@/components/BlogContainer";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowUpRightFromSquare } from "lucide-react";
 import Blog from "@/server/models/blog.model";
 import { connectdb } from "@/server/utils/connectdb";
+import PortfolioBtn from "@/components/PortfolioBtn";
+import { jetBrains } from "@/lib/typography";
 
 const page = async () => {
   await connectdb();
@@ -14,41 +15,34 @@ const page = async () => {
       <div className="max-w-2xl px-2 mx-auto">
         <div className="py-12">
           <div className="relative mx-auto text-center">
-            <h1 className="text-2xl sm:text-4xl font-bold flex items-center justify-center gap-2 md:gap-4 mb-4">
+            <h1
+              className={`text-2xl sm:text-4xl font-bold flex items-center justify-center gap-2 md:gap-4 mb-4 ${jetBrains.className}`}
+            >
               Roshan Paudel
               <div className="w-16 md:w-20 right-0 -bottom-10">
                 <Logo />
               </div>
             </h1>
-            <p className="md:text-base mb-8 font-medium">
+            <p
+              className={`md:text-base mb-8 font-medium ${jetBrains.className}`}
+            >
               Full-Satck Web Developer
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <img
-                  src="/pp.png" // Replace with your profile image URL
-                  alt="Profile"
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-              <div className="text-left">
-                <h2 className="text-2xl font-bold  mb-4">About Me</h2>
-                <p className=" mb-4">
-                  Hello! I'm a passionate <strong>Fullstack</strong> web
-                  developer & <strong>FOSS lover</strong> with a focus on
-                  creating user-friendly and robust web apps. I love turning
-                  ideas into reality through code.
-                </p>
-                <p className="mb-4 text-sm">
-                  Feel free to explore my portfolio and reach out if you have
-                  any questions or collaboration opportunities.
-                </p>
-                <div className="mt-2">
-                  <Button>
-                    <a>View Portfolio</a>
-                  </Button>
-                </div>
+            <div className={`text-left px-2 ${jetBrains.className}`}>
+              <h2 className="text-2xl font-bold  mb-4">About Me</h2>
+              <p className=" mb-4">
+                Hello! I'm a passionate <strong>Fullstack</strong> web developer
+                & <strong>FOSS lover</strong> with a focus on creating
+                user-friendly and robust web apps. I love turning ideas into
+                reality through code.
+              </p>
+              <p className="mb-4 text-sm">
+                Feel free to explore my portfolio and reach out if you have any
+                questions or collaboration opportunities.
+              </p>
+              <div className="mt-2">
+                <PortfolioBtn />
               </div>
             </div>
           </div>

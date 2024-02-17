@@ -71,12 +71,12 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image: radial-gradient(circle,
-        rgba(94, 0, 142, 0.015) 0%,
-        rgba(129, 3, 118, 0.05) 35%,
-        rgba(0, 212, 255, 0.05) 100%);
-    background-blend-mode: lighten;
-    animation: bg-animation 50s infinite;
+    /* background-image: radial-gradient(circle, */
+    /*     rgba(94, 0, 142, 0.015) 0%, */
+    /*     rgba(129, 3, 118, 0.05) 35%, */
+    /*     rgba(0, 212, 255, 0.05) 100%); */
+    /* background-blend-mode: lighten; */
+    /* animation: bg-animation 50s infinite; */
   }
 }
 

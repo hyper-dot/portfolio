@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
 import { Toaster } from "@/components/ui/toaster";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { jetBrains } from "@/lib/typography";
 
 const ProgressBar = dynamic(() => import("@/components/ProgressBar"), {
   ssr: false,
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`custom-scrollbar pb-20 md:pb-0 min-h-screen ${inter.className}`}
+        className={`custom-scrollbar pb-20 md:pb-0 min-h-screen ${jetBrains.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ProgressBar />
