@@ -1,6 +1,6 @@
 "use client";
 import Editor from "@/components/Editor";
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { blogSchema, TBlogSchema } from "@/schema/blog.schema";
@@ -9,12 +9,26 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import FormSubmitBtn from "@/components/form/FormSubmitBtn";
 import FormErrors from "@/components/form/FormErrors";
-import { addNewBlog } from "@/server/actions/blog.action";
+import { editBlog } from "@/server/actions/blog.action";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import BackButton from "@/components/BackButton";
 
-const page = () => {
+type TBlogEditForm = {
+  id: string;
+  title: string;
+  desc: string;
+  keywords: string;
+  body: string;
+};
+
+const BlogEditForm: FC<TBlogEditForm> = ({
+  id,
+  title,
+  desc,
+  keywords,
+  body: content,
+}) => {
   const router = useRouter();
   const [body, setBody] = useState("");
 
@@ -26,11 +40,19 @@ const page = () => {
     formState: { errors, isSubmitting },
   } = useForm<TBlogSchema>({ resolver: zodResolver(blogSchema) });
 
+  // Populate data
+  useEffect(() => {
+    setBody(content);
+    setValue("keywords", keywords);
+    setValue("desc", desc);
+    setValue("title", title);
+  }, []);
+
   const onSubmit = async (data: TBlogSchema) => {
-    const { success, message } = await addNewBlog(data);
+    const { success, message } = await editBlog(id, data);
     toast(
       success
-        ? "Successfully created blog post !! 🎉"
+        ? "Successfully updated blog post !! 🎉"
         : "Something went wrong ☹️",
       {
         description: message,
@@ -61,6 +83,8 @@ const page = () => {
         <div>
           <Label>Description</Label>
           <Textarea
+            rows={5}
+            className="custom-scrollbar"
             {...register("desc")}
             placeholder="Eg: The best blog in you've ever read [This will be on meta description]"
           />
@@ -70,6 +94,8 @@ const page = () => {
         <div>
           <Label>Keywords</Label>
           <Textarea
+            rows={5}
+            className="custom-scrollbar"
             {...register("keywords")}
             placeholder="Eg: Keyword rocks on meta [use comma seperated keywords]"
           />
@@ -82,10 +108,10 @@ const page = () => {
           <Editor value={body} setValue={setBody} className="" />
           {errors.body && <FormErrors>{errors.body.message}</FormErrors>}
         </div>
-        <FormSubmitBtn isSubmitting={isSubmitting}>Add Blog</FormSubmitBtn>
+        <FormSubmitBtn isSubmitting={isSubmitting}>Edit Blog</FormSubmitBtn>
       </form>
     </div>
   );
 };
 
-export default page;
+export default BlogEditForm;

@@ -30,7 +30,7 @@ export const addNewBlog = async (data: any) => {
     } catch (err) {
       console.log(err);
       return {
-        success: true,
+        success: false,
         message:
           "Oh no something went wrong !! You need to see on the console !",
       };
@@ -40,22 +40,36 @@ export const addNewBlog = async (data: any) => {
   }
 };
 
-export async function generateDummyBlogs() {
-  try {
-    // Loop to generate 30 dummy blogs
-    for (let i = 1; i <= 30; i++) {
-      const dummyBlog = new Blog({
-        title: `Dummy Blog ${i}`,
-        desc: `Description for Dummy Blog ${i}`,
-        keywords: `Keyword${i}, Keyword${i + 1}`,
-        body: `Body content for Dummy Blog ${i}`,
-        slug: `dummy-blog-${i}`,
-      });
+export const editBlog = async (id: string, data: any) => {
+  const parsedData = blogSchema.safeParse(data);
+  if (parsedData.success) {
+    try {
+      await connectdb();
+      const parsedId = JSON.parse(id);
+      const { title, body, desc, keywords } = parsedData.data;
+      await connectdb();
+      const slug = slugify(title, { lower: true, trim: true });
 
-      await dummyBlog.save();
-      console.log(`Dummy Blog ${i} created successfully.`);
+      const updated = await Blog.findByIdAndUpdate(parsedId, {
+        title,
+        body,
+        desc,
+        keywords,
+        slug,
+      });
+      console.log("UPDATED :", updated);
+      revalidatePath("/");
+      revalidatePath("/blogs");
+      revalidatePath("/admin/blogs");
+      return {
+        success: true,
+        message: "Hurray your blog has been updated successfully !!",
+      };
+    } catch (error) {
+      console.log(error);
+      return { success: false, message: "Server error." };
     }
-  } catch (error) {
-    console.error("Error generating dummy blogs:", error);
+  } else {
+    return { success: false, message: "Not valid data." };
   }
-}
+};

@@ -16,7 +16,7 @@ const BlogSection = ({ data }: { data: any }) => {
               <p className="text-gray-600 text-sm dark:text-gray-500 line-clamp-2">
                 {d.desc}
               </p>
-              <span className="mt-4 text-sm inline-flex transition duration-300">
+              <span className="mt-4 text-sm inline-flex">
                 Read More
                 <MoveRight
                   size={20}

@@ -13,6 +13,7 @@ import { connectdb } from "@/server/utils/connectdb";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Metadata } from "next";
+import BackButton from "@/components/BackButton";
 
 export const metadata: Metadata = {
   title: "Blogs || Roshan Paudel",
@@ -53,6 +54,9 @@ const page = async ({
 
     return (
       <div className="max-w-3xl mx-auto px-4 py-8">
+        <div className="py-10">
+          <BackButton />
+        </div>
         <h2 className="text-2xl font-bold px-4">All Blogs</h2>
         <BlogSection data={blogs} />
         <Pagination className="py-4">

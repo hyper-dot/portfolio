@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import hljs from "highlight.js";
 
 import "react-quill/dist/quill.snow.css";
+import { Loader } from "lucide-react";
 // import "react-quill/dist/quill.bubble.css";
 const ReactQuill = dynamic(
   () => {
@@ -18,7 +19,7 @@ const ReactQuill = dynamic(
   },
   {
     ssr: false,
-    loading: () => <p>Loading</p>,
+    loading: () => <p>Loading ...</p>,
   },
 );
 

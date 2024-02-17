@@ -30,12 +30,20 @@ const page = async () => {
             </p>
 
             <div className={`text-left px-2 ${jetBrains.className}`}>
-              <h2 className="text-2xl font-bold  mb-4">About Me</h2>
+              <h2 className="text-2xl font-bold  mb-4">
+                About Me{" "}
+                {/* 
+                <span className="text-xs font-normal inline-flex items-center gap-2">
+                  <span className="inline-block w-3 h-3 bg-green-500 rounded-full before:content-[' '] before:bg-green-500 relative before:absolute before:animate-ping before:h-3 before:w-3 before:rounded-full"></span>{" "}
+                  Available
+                </span> */}
+              </h2>
               <p className=" mb-4">
-                Hello! I'm a passionate <strong>Fullstack</strong> web developer
-                & <strong>FOSS lover</strong> with a focus on creating
-                user-friendly and robust web apps. I love turning ideas into
-                reality through code.
+                Hello! I'm a passionate{" "}
+                <span className="font-bold">Fullstack</span> web developer &{" "}
+                <span className="font-bold">FOSS lover</span> with a focus on
+                creating user-friendly and robust web apps. I love turning ideas
+                into reality through code.
               </p>
               <p className="mb-4 text-sm">
                 Feel free to explore my portfolio and reach out if you have any
@@ -53,7 +61,7 @@ const page = async () => {
             Latest Blog Posts
             <Link
               href="/blogs"
-              className="pl-4 text-sm transition-all duration-200 inline-flex gap-2 items-center font-medium hover:underline underline-offset-4"
+              className="pl-4 text-sm transition-all duration-200 inline-flex gap-2 items-center font-medium underline underline-offset-4"
             >
               <ArrowUpRightFromSquare size={16} /> All Blogs
             </Link>

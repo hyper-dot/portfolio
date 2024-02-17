@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
-import Navbar from "@/components/Nav";
 import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
 import { Toaster } from "@/components/ui/toaster";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { jetBrains } from "@/lib/typography";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 const ProgressBar = dynamic(() => import("@/components/ProgressBar"), {
   ssr: false,
 });
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Roshan Paudel",
@@ -28,11 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`custom-scrollbar pb-20 md:pb-0 min-h-screen ${jetBrains.className}`}
+        className={`custom-scrollbar relative transition-colors duration-100 pb-20 md:pb-0 min-h-screen ${jetBrains.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="absolute right-3 top-3">
+            <ThemeSwitcher />
+          </div>
           <ProgressBar />
-          <Navbar />
           {children}
           <Toaster />
           <Footer />

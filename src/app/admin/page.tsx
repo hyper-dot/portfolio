@@ -3,8 +3,8 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <Link href="/admin/blogs/new">Blogs</Link>
+    <div className="max-w-3xl mx-auto py-10">
+      <Link href="/admin/blogs">Blogs</Link>
     </div>
   );
 };
