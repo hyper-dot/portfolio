@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { jetBrains } from "@/lib/typography";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
+import { Analytics } from "@vercel/analytics/react";
 
 const ProgressBar = dynamic(() => import("@/components/ProgressBar"), {
   ssr: false,
@@ -37,6 +38,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
         <GoogleAnalytics gaId="G-PVJCEKSNN8" />
+        <Analytics />
       </body>
     </html>
   );
