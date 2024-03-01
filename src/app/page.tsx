@@ -45,9 +45,9 @@ const page = async () => {
                 creating user-friendly and robust web apps. I love turning ideas
                 into reality through code.
               </p>
-              <p className="mb-4 text-sm">
+              <p className="mb-4 text-xs">
                 Feel free to explore my portfolio and reach out if you have any
-                questions or collaboration opportunities.
+                questions❓or collaboration 🤝 opportunities.
               </p>
               <div className="mt-2">
                 <PortfolioBtn />

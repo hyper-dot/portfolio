@@ -7,12 +7,12 @@ const PortfolioBtn = () => {
   return (
     <div className="flex gap-4 items-end">
       <Button asChild>
-        <Link href="/portfolio" className="flex">
+        <Link href="https://github.com/hyper-dot" className="flex">
           Portfolio
         </Link>
       </Button>
       <Button variant="secondary" asChild>
-        <Link href="/portfolio" className="flex gap-2">
+        <Link href="#" className="flex gap-2">
           <DownloadIcon size={20} /> Resume
         </Link>
       </Button>
