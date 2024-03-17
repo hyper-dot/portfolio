@@ -24,7 +24,7 @@ export const POST = async (req: NextRequest) => {
 
     const user = await Admin.findOne({ username: body.username });
 
-    console.log(user);
+    // console.log(user);
 
     if (user) {
       const isPasswordValid = await bcrypt.compare(

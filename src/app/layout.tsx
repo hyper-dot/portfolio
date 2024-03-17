@@ -15,7 +15,8 @@ const ProgressBar = dynamic(() => import("@/components/ProgressBar"), {
 
 export const metadata: Metadata = {
   title: "Roshan Paudel",
-  description: "Full Stack Developer",
+  description: "Full Stack Developer | Roshan Paudel",
+  keywords: "Roshan Paudel, developer, fullstack, self-taught",
 };
 
 export default function RootLayout({
