@@ -5,7 +5,6 @@ import { ArrowUpRightFromSquare } from "lucide-react";
 import Blog from "@/server/models/blog.model";
 import { connectdb } from "@/server/utils/connectdb";
 import PortfolioBtn from "@/components/PortfolioBtn";
-import { jetBrains } from "@/lib/typography";
 
 const page = async () => {
   await connectdb();
@@ -16,20 +15,18 @@ const page = async () => {
         <div className="py-12">
           <div className="relative mx-auto text-center">
             <h1
-              className={`text-2xl sm:text-4xl font-bold flex items-center justify-center gap-2 md:gap-4 mb-4 ${jetBrains.className}`}
+              className={`text-2xl sm:text-4xl font-bold flex items-center justify-center gap-2 md:gap-4 mb-4`}
             >
               Roshan Paudel
               <div className="w-16 md:w-20 right-0 -bottom-10">
                 <Logo />
               </div>
             </h1>
-            <p
-              className={`md:text-base mb-8 font-medium ${jetBrains.className}`}
-            >
+            <p className={`md:text-base mb-8 font-medium`}>
               Full-Satck Web Developer
             </p>
 
-            <div className={`text-left px-2 ${jetBrains.className}`}>
+            <div className={`text-left px-2 `}>
               <h2 className="text-2xl font-bold  mb-4">
                 About Me{" "}
                 {/* 

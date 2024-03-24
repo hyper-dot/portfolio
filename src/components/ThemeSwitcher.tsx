@@ -8,7 +8,7 @@ export default function ThemeSwitcher() {
   const { setTheme } = useTheme();
 
   return (
-    <button className="bg-none outline-none ring-transparent">
+    <button className="bg-none outline-none ring-transparent fixed top-2 right-3">
       <SunIcon
         onClick={() => setTheme("light")}
         size={20}
