@@ -35,7 +35,7 @@ const page = async () => {
                 {/* 
                 <span className="text-xs font-normal inline-flex items-center gap-2">
                   <span className="inline-block w-3 h-3 bg-green-500 rounded-full before:content-[' '] before:bg-green-500 relative before:absolute before:animate-ping before:h-3 before:w-3 before:rounded-full"></span>{" "}
-                  Available
+                  Availablee
                 </span> */}
               </h2>
               <p className=" mb-4">
