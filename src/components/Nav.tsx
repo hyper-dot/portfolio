@@ -4,7 +4,6 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import { Briefcase, UserRound, Mail, Home } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { jetBrains } from "@/lib/typography";
 
 const menus = [
   {
@@ -35,7 +34,7 @@ const Navbar = () => {
   const pathname = usePathname();
   return (
     <>
-      <nav className={`p-4 hidden md:block ${jetBrains.className}`}>
+      <nav className={`p-4 hidden md:block`}>
         <div className="max-w-3xl gap-8 mx-auto flex justify-center items-center">
           {menus.map((m, idx) => (
             <Link
