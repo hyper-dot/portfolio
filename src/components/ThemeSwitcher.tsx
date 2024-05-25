@@ -8,7 +8,7 @@ export default function ThemeSwitcher() {
   const { setTheme } = useTheme();
 
   return (
-    <button className="bg-none outline-none">
+    <button className="bg-none hover:text-green-600 dark:hover:text-green-400  outline-none">
       <SunIcon
         onClick={() => setTheme("light")}
         size={22}

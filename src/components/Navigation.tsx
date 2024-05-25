@@ -11,17 +11,17 @@ const Navigation = () => {
       </div>
 
       <ul className="flex self-center items-center gap-3">
-        <li className="hover:bg-secondary p-2 transition-all duration-200 ">
+        <li className="hover:text-green-600 dark:hover:text-green-400 p-2 transition-all duration-200 ">
           <a href="https://github.com/hyper-dot" target="_blank">
             <FaGithub size={20} />
           </a>
         </li>
-        <li className="hover:bg-secondary p-2 transition-all duration-200">
+        <li className="hover:text-green-600 dark:hover:text-green-400 p-2 transition-all duration-200">
           <a href="https://www.facebook.com/leduap.nahsor" target="_blank">
             <FaFacebook size={20} />
           </a>
         </li>
-        <li className="hover:bg-secondary p-2 transition-all duration-200 ">
+        <li className="hover:text-green-600 dark:hover:text-green-400 p-2 transition-all duration-200 ">
           <a
             href="https://www.linkedin.com/in/roshan-paudel-200186167/"
             target="_blank"

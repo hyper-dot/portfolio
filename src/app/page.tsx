@@ -1,6 +1,7 @@
-import Logo from "@/components/Logo";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { jetbrains } from "@/lib/typography";
+import { cn } from "@/lib/utils";
 import {
   DownloadIcon,
   FolderHeart,
@@ -8,7 +9,45 @@ import {
   PencilLine,
   User,
 } from "lucide-react";
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+
+const data = [
+  {
+    title: (
+      <>
+        My <br /> Projects
+      </>
+    ),
+    icon: <FolderHeart size={48} strokeWidth={1.5} />,
+    to: "",
+  },
+  {
+    title: (
+      <>
+        About <br /> Me
+      </>
+    ),
+    icon: <User size={48} strokeWidth={1.5} />,
+    to: "",
+  },
+  {
+    title: (
+      <>
+        My <br /> Blogs
+      </>
+    ),
+    icon: <PencilLine size={48} strokeWidth={1.5} />,
+    to: "",
+  },
+  {
+    title: (
+      <>
+        Message <br /> Me
+      </>
+    ),
+    icon: <MailCheck size={48} strokeWidth={1.5} />,
+    to: "",
+  },
+];
 
 const page = () => {
   return (
@@ -23,24 +62,29 @@ const page = () => {
             into reality through code.
           </p>
 
-          <Button className="w-fit flex gap-2 items-center">
-            Download Resume <DownloadIcon size={16} />
+          <Button className="w-[180px] hover:text-primary relative group hover:text-green-600 dark:hover:text-green-400 shadow-none overflow-hidden">
+            <div className="bg-primary-foreground absolute inset-0 -translate-x-[180px] group-hover:translate-x-0 transition-all duration-500"></div>
+            <span className="flex gap-2 items-center absolute">
+              Download Resume <DownloadIcon size={16} />
+            </span>
           </Button>
         </div>
-        <div className="grid place-items-center">
+        <div className={cn("grid place-items-center", jetbrains.className)}>
           <div className="grid grid-cols-2 gap-8">
-            <div className="border border-primary grid place-items-center w-44 h-44">
-              <FolderHeart size={48} strokeWidth={1.5} />
-            </div>
-            <div className="border border-primary grid place-items-center w-44 h-44">
-              <User size={48} strokeWidth={1.5} />
-            </div>
-            <div className="border border-primary grid place-items-center w-44 h-44">
-              <PencilLine size={48} strokeWidth={1.5} />
-            </div>
-            <div className="border border-primary grid place-items-center w-44 h-44">
-              <MailCheck size={48} strokeWidth={1.5} />
-            </div>
+            {data.map((d, idx) => (
+              <Link
+                href={d.to}
+                key={idx}
+                className="border relative border-primary group grid place-items-center overflow-hidden w-44 h-44"
+              >
+                <div className="h-full text-primary-foreground text-3xl flex px-2 items-center justify-center transform absolute bg-primary w-full -translate-x-[200px] group-hover:translate-x-0 duration-500 origin-left">
+                  {d.title}
+                </div>
+                <div className="text-green-600 dark:text-green-400">
+                  {d.icon}
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
