@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import Footer from "@/components/Footer";
 import dynamic from "next/dynamic";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "react-hot-toast";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { nunito } from "@/lib/typography";
 import { Analytics } from "@vercel/analytics/react";
@@ -34,8 +34,8 @@ export default function RootLayout({
           <main className="min-h-screen flex flex-col">
             <Navigation />
             {children}
-            <Toaster />
             <Footer />
+            <Toaster />
           </main>
         </ThemeProvider>
         <GoogleAnalytics gaId="G-PVJCEKSNN8" />
