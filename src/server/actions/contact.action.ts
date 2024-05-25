@@ -3,11 +3,11 @@ import { TContactSchema, contactSchema } from "@/schema/contact.schema";
 import nodemailer from "nodemailer";
 // Create a transporter
 let transporter = nodemailer.createTransport({
-  host: "mail.metalogic.com.np",
+  host: process.env.NODE_MAILER_HOST,
   port: 465,
   auth: {
-    user: "career@metalogic.com.np",
-    pass: "met@log!c9",
+    user: process.env.NODE_MAILER_USER,
+    pass: process.env.NODE_MAILER_PASS,
   },
 });
 
@@ -22,7 +22,7 @@ export async function sendMail(data: TContactSchema) {
 
   // Setup email data
   let mailOptions = {
-    from: '"Metalogic Nepal" <career@metalogic.com.np>',
+    from: '"Portfolio Website" <roshan@metalogic.com.np>',
     to: "rozanpoudel@gmail.com",
     subject: "Message came from portfolio website",
     html: emailTemplate(name, email, message),
