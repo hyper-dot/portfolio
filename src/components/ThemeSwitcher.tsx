@@ -8,17 +8,17 @@ export default function ThemeSwitcher() {
   const { setTheme } = useTheme();
 
   return (
-    <button className="bg-none outline-none ring-transparent fixed top-2 right-3">
+    <button className="bg-none hover:text-green-600 dark:hover:text-green-400  outline-none">
       <SunIcon
         onClick={() => setTheme("light")}
-        size={20}
-        strokeWidth={1}
+        size={22}
+        strokeWidth={2}
         className="hidden dark:inline"
       />
       <Moon
         onClick={() => setTheme("dark")}
-        size={20}
-        strokeWidth={1}
+        size={22}
+        strokeWidth={2}
         className="inline dark:hidden"
       />
     </button>
