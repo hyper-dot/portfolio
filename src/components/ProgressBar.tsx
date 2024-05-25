@@ -8,6 +8,7 @@ export default function ProgressBar() {
       height="2px"
       options={{ showSpinner: false }}
       shallowRouting
+      color="#4ade80"
     />
   );
 }

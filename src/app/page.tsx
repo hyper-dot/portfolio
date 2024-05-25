@@ -36,7 +36,7 @@ const data = [
       </>
     ),
     icon: <PencilLine size={48} strokeWidth={1.5} />,
-    to: "",
+    to: "/blogs",
   },
   {
     title: (
