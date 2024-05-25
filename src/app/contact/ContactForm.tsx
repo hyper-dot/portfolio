@@ -17,10 +17,12 @@ const ContactForm = () => {
     register,
     formState: { errors, isSubmitting },
     watch,
+    reset,
   } = useForm<TContactSchema>({ resolver: zodResolver(contactSchema) });
 
   const onSubmit = async (payload: TContactSchema) => {
-    toast.promise(sendMail(payload), {
+    const promise = sendMail(payload).then(() => reset());
+    toast.promise(promise, {
       loading: "Please wait ...",
       success: "Message sent successfully !!",
       error: "Something went wrong !!",
