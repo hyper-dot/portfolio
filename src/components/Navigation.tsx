@@ -5,12 +5,12 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navigation = () => {
   return (
-    <div className="flex justify-between 2xl:container pt-4 px-8">
+    <div className="flex justify-between 2xl:container pt-4 px-2 md:px-8">
       <div className="w-16 md:w-20 right-0 -bottom-10">
         <Logo />
       </div>
 
-      <ul className="flex self-center items-center gap-3">
+      <ul className="flex self-center items-center gap-1 md:gap-3">
         <li className="hover:text-green-600 dark:hover:text-green-400 p-2 transition-all duration-200 ">
           <a href="https://github.com/hyper-dot" target="_blank">
             <FaGithub size={20} />

@@ -52,7 +52,7 @@ const data = [
 const page = () => {
   return (
     <>
-      <div className="flex-1 px-10 grid h-full max-w-5xl mx-auto grid-cols-2 gap-5 pt-5">
+      <div className="flex-1 px-10 grid h-full max-w-5xl mx-auto md:grid-cols-2 gap-5 pt-5">
         <div className="gap-4 flex flex-col justify-center">
           <p>Hello 👋</p>
           <h1 className="text-3xl">I'M Roshan Paudel</h1>
@@ -69,15 +69,20 @@ const page = () => {
             </span>
           </Button>
         </div>
-        <div className={cn("grid place-items-center", jetbrains.className)}>
+        <div
+          className={cn(
+            "grid md:place-items-center w-fit",
+            jetbrains.className,
+          )}
+        >
           <div className="grid grid-cols-2 gap-8">
             {data.map((d, idx) => (
               <Link
                 href={d.to}
                 key={idx}
-                className="border relative border-primary group grid place-items-center overflow-hidden w-44 h-44"
+                className="border relative border-primary group grid place-items-center overflow-hidden w-32 h-32 md:w-44 md:h-44"
               >
-                <div className="h-full text-primary-foreground text-3xl flex px-2 items-center justify-center transform absolute bg-primary w-full -translate-x-[200px] group-hover:translate-x-0 duration-500 origin-left">
+                <div className="h-full text-primary-foreground text-2xl md:text-3xl flex px-2 items-center justify-center transform absolute bg-primary w-full -translate-x-[200px] group-hover:translate-x-0 duration-500 origin-left">
                   {d.title}
                 </div>
                 <div className="text-green-600 dark:text-green-400">
