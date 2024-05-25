@@ -7,7 +7,7 @@ const BackButton = () => {
   const router = useRouter();
   return (
     <button
-      className="flex gap-2 text-muted-foreground hover:text-primary transition-all duration-200 text-sm items-center"
+      className="flex hover:text-green-600 dark:hover:text-green-400 gap-2 transition-all duration-200 text-sm items-center"
       onClick={() => router.back()}
     >
       <MoveLeft strokeWidth={1} />

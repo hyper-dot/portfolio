@@ -62,8 +62,11 @@ const page = () => {
             into reality through code.
           </p>
 
-          <Button className="w-[180px] hover:text-primary relative group hover:text-green-600 dark:hover:text-green-400 shadow-none overflow-hidden">
-            <div className="bg-primary-foreground absolute inset-0 -translate-x-[180px] group-hover:translate-x-0 transition-all duration-500"></div>
+          <Button
+            variant="outline"
+            className="w-[180px] text-green-600 dark:text-green-400 hover:text-green-400 hover:dark:text-green-600 relative group shadow-none overflow-hidden"
+          >
+            <div className="bg-primary absolute inset-0 -translate-x-[180px] group-hover:translate-x-0 transition-all duration-500"></div>
             <span className="flex gap-2 items-center absolute">
               Download Resume <DownloadIcon size={16} />
             </span>
@@ -80,14 +83,12 @@ const page = () => {
               <Link
                 href={d.to}
                 key={idx}
-                className="border relative border-primary group grid place-items-center overflow-hidden w-32 h-32 md:w-44 md:h-44"
+                className="border text-green-600 dark:text-green-400 relative border-primary group grid place-items-center overflow-hidden w-32 h-32 md:w-44 md:h-44"
               >
-                <div className="h-full text-primary-foreground text-2xl md:text-3xl flex px-2 items-center justify-center transform absolute bg-primary w-full -translate-x-[200px] group-hover:translate-x-0 duration-500 origin-left">
+                <div className="h-full text-green-400 dark:text-green-600 text-2xl md:text-3xl flex px-2 items-center justify-center transform absolute bg-primary w-full -translate-x-[200px] transition-transform group-hover:translate-x-0 duration-500 origin-left">
                   {d.title}
                 </div>
-                <div className="text-green-600 dark:text-green-400">
-                  {d.icon}
-                </div>
+                <div>{d.icon}</div>
               </Link>
             ))}
           </div>
