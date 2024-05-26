@@ -13,7 +13,6 @@ import { connectdb } from "@/server/utils/connectdb";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Metadata } from "next";
-import BackButton from "@/components/BackButton";
 
 export const metadata: Metadata = {
   title: "Blogs || Roshan Paudel",
@@ -45,18 +44,15 @@ const page = async ({
     const currentPage = Number(page);
     const blogsQuery = next
       ? Blog.find({ _id: { $lt: next } })
-        .sort({ _id: -1 })
-        .limit(10)
+          .sort({ _id: -1 })
+          .limit(10)
       : Blog.find().sort({ _id: -1 }).limit(10);
 
     const blogs = await blogsQuery;
     const nextPointer = blogs.length > 0 ? blogs[blogs.length - 1]._id : null;
 
     return (
-      <div className="max-w-3xl mx-auto px-4 py-8">
-        <div className="py-10">
-          <BackButton />
-        </div>
+      <>
         <h2 className="text-2xl font-bold px-4">All Blogs</h2>
         <BlogSection data={blogs} />
         <Pagination className="py-4">
@@ -91,7 +87,7 @@ const page = async ({
             </PaginationItem>
           </PaginationContent>
         </Pagination>
-      </div>
+      </>
     );
   } catch (error) {
     console.error("Error in page component:", error);

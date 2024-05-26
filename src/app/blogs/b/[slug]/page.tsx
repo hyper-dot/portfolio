@@ -33,12 +33,8 @@ const page = async ({ params }: { params: { slug: string } }) => {
     const blog = await Blog.findOne({ slug });
 
     return (
-      <div className="max-w-3xl mx-auto px-2">
-        <div className="mt-4 mb-10">
-          <div className="mb-8 px-5">
-            <BackButton />
-          </div>
-
+      <>
+        <div className="mb-10">
           <h1 className="text-4xl font-semibold text-center">{blog.title}</h1>
           <div className="flex justify-center my-8 gap-4">
             <div className="flex gap-2 items-center">
@@ -59,7 +55,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
           <span className="text-xs">Share this article in social media</span>
           <SocialShareBtn url={`https://rosanpaudel.com.np/blogs/b/${slug}`} />
         </div>
-      </div>
+      </>
     );
   } catch (err) {
     console.log(err);
