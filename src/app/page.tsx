@@ -27,7 +27,7 @@ const data = [
       </>
     ),
     icon: <User size={48} strokeWidth={1.5} />,
-    to: "",
+    to: "/about",
   },
   {
     title: (

@@ -5,7 +5,6 @@ import Blog from "@/server/models/blog.model";
 import { connectdb } from "@/server/utils/connectdb";
 import "highlight.js/styles/github-dark.css";
 import SocialShareBtn from "@/components/SocialShareBtn";
-import BackButton from "@/components/BackButton";
 
 // or Dynamic metadata
 export async function generateMetadata({
@@ -34,7 +33,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 
     return (
       <>
-        <div className="mb-10">
+        <div className="w-full">
           <h1 className="text-4xl font-semibold text-center">{blog.title}</h1>
           <div className="flex justify-center my-8 gap-4">
             <div className="flex gap-2 items-center">
@@ -48,7 +47,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
           </div>
         </div>
         <div
-          className="blog"
+          className="blog px-2"
           dangerouslySetInnerHTML={{ __html: blog.body }}
         ></div>
         <div className="py-8 flex items-center flex-col justify-center">
