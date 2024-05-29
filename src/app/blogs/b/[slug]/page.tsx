@@ -33,19 +33,20 @@ const page = async ({ params }: { params: { slug: string } }) => {
 
     return (
       <>
-        <div className="w-full">
-          <h1 className="text-4xl font-semibold text-center">{blog.title}</h1>
-          <div className="flex justify-center my-8 gap-4">
-            <div className="flex gap-2 items-center">
-              <User size={16} strokeWidth={2} />
-              <span>Roshan Paudel</span>
-            </div>
-            <div className="flex gap-2  items-center">
-              <Calendar size={16} strokeWidth={2} />
-              <span>21 Dec 2024</span>
-            </div>
+        <h1 className="text-2xl md:text-4xl font-semibold text-center">
+          {blog.title}
+        </h1>
+        <div className="flex justify-center my-8 gap-4">
+          <div className="flex gap-2 items-center">
+            <User size={16} strokeWidth={2} />
+            <span>Roshan Paudel</span>
+          </div>
+          <div className="flex gap-2  items-center">
+            <Calendar size={16} strokeWidth={2} />
+            <span>21 Dec 2024</span>
           </div>
         </div>
+
         <div
           className="blog px-2"
           dangerouslySetInnerHTML={{ __html: blog.body }}
