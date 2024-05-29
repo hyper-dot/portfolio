@@ -36,7 +36,6 @@ const data = {
       "Framer Motion",
       "React Query",
       "Redux Toolkit",
-      "Zustand",
       "Hook Form",
       "HTML",
       "CSS",
