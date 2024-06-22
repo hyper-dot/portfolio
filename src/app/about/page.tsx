@@ -58,7 +58,7 @@ const Page = () => {
         <p className="text-lg">
           I'm Roshan Paudel, a passionate Fullstack web developer and Linux
           enthusiast. My expertise lies in the MERN stack and TypeScript.
-          Currently, I'm honing my skills as a Frontend Developer at Metalogic
+          Currently, I'm honing my skills as a Fullstack Developer at Metalogic
           Software Pvt. Ltd., where I've contributed to the development and
           deployment of numerous high-quality projects. My experience at
           StartupHire has equipped me with the ability to thrive in remote,
