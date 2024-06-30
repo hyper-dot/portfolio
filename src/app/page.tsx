@@ -64,7 +64,7 @@ const page = () => {
 
           <Button
             variant="outline"
-            className="w-[180px] text-green-600 dark:text-green-400 hover:text-green-400 hover:dark:text-green-600 relative group shadow-none overflow-hidden"
+            className="w-[180px] text-green-600 dark:text-green-400 hover:text-green-400 hover:dark:text-green-600 relative group shadow-none overflow-hidden hover:bg-transparent"
           >
             <div className="bg-primary absolute inset-0 -translate-x-[180px] group-hover:translate-x-0 transition-all duration-500"></div>
             <span className="flex gap-2 items-center absolute">
