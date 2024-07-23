@@ -7,7 +7,7 @@ const data = {
       logo: "https://metalogic.com.np/metalogo.png",
       company: "Metalogic Software",
       url: "https://metalogic.com.np",
-      title: "Full Stack Developer",
+      title: "Full Stack Developer (Node & React)",
       from: "Feb 2023",
       to: "Present",
     },
@@ -56,18 +56,18 @@ const Page = () => {
       <section className="mb-12">
         <h1 className="text-4xl font-bold mb-4">About Me</h1>
         <p className="text-lg">
-          I'm Roshan Paudel, a passionate Fullstack web developer and Linux
-          enthusiast. My expertise lies in the MERN stack and TypeScript.
-          Currently, I'm honing my skills as a Fullstack Developer at Metalogic
-          Software Pvt. Ltd., where I've contributed to the development and
-          deployment of numerous high-quality projects. My experience at
-          StartupHire has equipped me with the ability to thrive in remote,
-          collaborative environments. I excel in both frontend and backend
-          technologies, with proficiency in React, Next.js, Node.js, and
-          Express.js. My project portfolio showcases my knack for creating
-          dynamic and responsive web applications. I'm actively seeking junior
-          roles in frontend or fullstack development, dedicated to continuous
-          learning and delivering scalable solutions.
+          I am Roshan Paudel, a passionate Fullstack web developer and Linux
+          enthusiast with expertise in the MERN stack, TypeScript, TypeORM, and
+          PostgreSQL. Currently, I am working as a mid-level frontend developer,
+          excelling in both frontend and backend technologies, including React,
+          Next.js, Node.js, and Express.js.
+          <br />
+          My experience at StartupHire and Metalogic has equipped me to thrive
+          in remote, collaborative environments, where I have contributed to
+          numerous high-quality projects. My project portfolio showcases my
+          ability to create dynamic and responsive web applications. I am
+          actively seeking junior roles in frontend or fullstack development,
+          dedicated to continuous learning and delivering scalable solutions.
         </p>
       </section>
 
