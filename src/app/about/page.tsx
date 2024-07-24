@@ -9,13 +9,13 @@ const data = {
       url: "https://metalogic.com.np",
       title: "Full Stack Developer (Node & React)",
       from: "Feb 2023",
-      to: "Present",
+      to: "Jul 2023",
     },
     {
       logo: "https://media.licdn.com/dms/image/C4D0BAQFVBaWozNJXfg/company-logo_200_200/0/1630545258536/startuphire_logo?e=1724889600&v=beta&t=pZQwoZRmyFNjiiLZzDe74ykDU2uFOI3X5lCvd0slf7Y",
       company: "StartupHire",
       title: "Frontend Developer",
-      url: "",
+      url: "https://www.linkedin.com/company/startuphire/about",
       from: "Jan 2023",
       to: "Feb 2023",
     },
@@ -23,7 +23,7 @@ const data = {
       logo: "https://media.licdn.com/dms/image/C4D0BAQFVBaWozNJXfg/company-logo_200_200/0/1630545258536/startuphire_logo?e=1724889600&v=beta&t=pZQwoZRmyFNjiiLZzDe74ykDU2uFOI3X5lCvd0slf7Y",
       company: "StartupHire",
       title: "Frontend Developer Intern",
-      url: "",
+      url: "https://www.linkedin.com/company/startuphire/about",
       from: "Sep 2023",
       to: "Dec 2023",
     },
@@ -113,12 +113,12 @@ const Page = () => {
         <h2 className="text-2xl font-medium mb-6">Skills</h2>
         {Object.entries(data.skills).map(([category, skills], index) => (
           <div key={index} className="mb-8">
-            <h3 className="text-xl mb-4 capitalize">{category}</h3>
+            <h3 className="text-xl mb-4 capitalize font-medium">{category}</h3>
             <ul className="flex flex-wrap gap-4">
               {skills.map((skill, skillIndex) => (
                 <li
                   key={skillIndex}
-                  className="bg-secondary px-4 py-2 rounded-full"
+                  className="bg-secondary text-sm px-4 py-2 rounded-full"
                 >
                   {skill}
                 </li>
