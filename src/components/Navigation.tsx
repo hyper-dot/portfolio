@@ -40,7 +40,8 @@ const Navigation = () => {
             <li key={idx} className="relative">
               <Link
                 className={cn(
-                  "link relative flex gap-2 tracking-wide before:absolute before:-bottom-1 before:h-[1px] before:w-0 before:bg-primary-foreground before:transition-width before:duration-500 hover:before:w-full",
+                  "link relative flex gap-2 tracking-wide",
+                  "before:absolute before:-bottom-1 before:h-[1px] before:w-0 before:bg-primary-foreground before:transition-width before:duration-500 hover:before:w-full",
                   pathname === item.to ? "active" : "",
                 )}
                 href={item.to}
