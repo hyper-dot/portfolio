@@ -22,7 +22,7 @@ const MenuIcon = ({ open, setOpen }: { open: boolean; setOpen: any }) => {
       <span
         className={cn(
           "block h-[3px] w-full rounded-3xl bg-black transition-all duration-500",
-          open ? "-translate-y-[0.3rem] -rotate-45 bg-white" : "",
+          open ? "-translate-y-[0.4rem] -rotate-45 bg-white" : "",
         )}
       ></span>
     </button>
