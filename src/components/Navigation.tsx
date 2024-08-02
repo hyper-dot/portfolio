@@ -9,10 +9,10 @@ import MenuIcon from "./MenuIcon";
 
 const menus = [
   { title: "Home", to: "/" },
-  { title: "About", to: "" },
-  { title: "Blogs", to: "" },
-  { title: "Projects", to: "" },
-  { title: "Say Hi", to: "", icon: <IoIosChatbubbles size={52} /> },
+  { title: "About", to: "/about" },
+  { title: "Blogs", to: "/blogs" },
+  { title: "Portfolio", to: "/portfolio" },
+  { title: "Say Hi", to: "/contact", icon: <IoIosChatbubbles size={52} /> },
 ];
 
 const Navigation = () => {
@@ -23,6 +23,10 @@ const Navigation = () => {
     <nav className="sticky top-0 z-50 flex items-center justify-between bg-white px-8 py-4">
       <Logo />
 
+      <h1 className="flex-1 -translate-x-[20px] text-center">
+        {menus.find((m) => m.to == pathname)?.title}
+      </h1>
+
       <MenuIcon open={open} setOpen={setOpen} />
 
       <div
@@ -31,7 +35,7 @@ const Navigation = () => {
           open ? "clip-path-circle-open" : "clip-path-circle-close",
         )}
       >
-        <ul className="flex h-full flex-col items-center justify-center gap-6 text-5xl font-thin text-white">
+        <ul className="flex h-full flex-col items-center justify-center gap-12 text-5xl font-thin text-white">
           {menus.map((item, idx) => (
             <li key={idx} className="relative">
               <Link
