@@ -3,11 +3,15 @@ import { connectdb } from "@/lib/db";
 import Blog from "@/app/models/Blog";
 import "highlight.js/styles/github-dark.css";
 
+import { unstable_noStore as nostore } from "next/cache";
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
 }) {
+  nostore();
   await connectdb();
   const blog = await Blog.findOne({ slug: params.slug });
   return {

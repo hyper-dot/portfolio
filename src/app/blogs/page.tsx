@@ -2,29 +2,11 @@ import { connectdb } from "@/lib/db";
 import Link from "next/link";
 import Blog from "../models/Blog";
 
-const blogs = [
-  {
-    id: 1,
-    title: "Understanding nodejs philoshopy",
-    description:
-      "A deep dive into React Hooks and how they can be used to manage state and side effects in functional components functional components...",
-    to: "/blogs/story-about-nodejs",
-  },
-  {
-    id: 2,
-    title: "Getting Started with Tailwind CSS",
-    description:
-      "Learn how to set up and use Tailwind CSS to create beautiful and responsive designs quickly responsive designs quickly...",
-  },
-  {
-    id: 3,
-    title: "Introduction to Next.js",
-    description:
-      "An overview of Next.js and how it can be used to build server-side rendered React applications React applications....",
-  },
-];
+import { unstable_noStore as nostore } from "next/cache";
+export const dynamic = "force-dynamic";
 
 export default async function Page() {
+  nostore();
   await connectdb();
   const blogs = await Blog.find().sort({ createdAt: -1 });
   console.log(blogs);
