@@ -24,7 +24,7 @@ const blogs = [
 
 const BlogList = () => {
   return (
-    <div className="">
+    <div className="h-full">
       <div className="mx-auto max-w-3xl pt-10">
         <h1 className="mb-8 text-4xl font-semibold">
           <span>Some words that I&apos;ve written beside codes</span>
