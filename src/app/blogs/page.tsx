@@ -1,4 +1,6 @@
+import { connectdb } from "@/lib/db";
 import Link from "next/link";
+import Blog from "../models/Blog";
 
 const blogs = [
   {
@@ -22,7 +24,11 @@ const blogs = [
   },
 ];
 
-const BlogList = () => {
+export default async function Page() {
+  await connectdb();
+  const blogs = await Blog.find().sort({ createdAt: -1 });
+  console.log(blogs);
+
   return (
     <div className="h-full">
       <div className="mx-auto max-w-3xl pt-10">
@@ -35,9 +41,9 @@ const BlogList = () => {
               <h2 className="flex items-center text-2xl font-semibold">
                 {blog.title}
               </h2>
-              <p className="text-gray-700">{blog.description}</p>
+              <p className="text-gray-700">{blog.desc}</p>
               <Link
-                href={blog.to || ""}
+                href={`/blogs/${blog.slug}`}
                 className="underline underline-offset-2"
               >
                 Read more
@@ -48,6 +54,4 @@ const BlogList = () => {
       </div>
     </div>
   );
-};
-
-export default BlogList;
+}
