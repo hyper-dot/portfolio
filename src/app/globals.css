@@ -117,3 +117,15 @@
     stroke-dashoffset: 0;
   }
 }
+
+.content>pre {
+  @apply max-w-full relative text-white overflow-auto bg-primary
+}
+
+.copy-btn {
+  @apply absolute text-sm top-2 right-2
+}
+
+.content>code {
+  @apply bg-primary
+}

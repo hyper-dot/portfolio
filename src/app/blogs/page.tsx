@@ -1,12 +1,12 @@
 import Link from "next/link";
-import React from "react";
 
 const blogs = [
   {
     id: 1,
-    title: "Understanding React Hooks",
+    title: "Understanding nodejs philoshopy",
     description:
       "A deep dive into React Hooks and how they can be used to manage state and side effects in functional components functional components...",
+    to: "/blogs/story-about-nodejs",
   },
   {
     id: 2,
@@ -36,7 +36,10 @@ const BlogList = () => {
                 {blog.title}
               </h2>
               <p className="text-gray-700">{blog.description}</p>
-              <Link href="/blogs/id" className="underline underline-offset-2">
+              <Link
+                href={blog.to || ""}
+                className="underline underline-offset-2"
+              >
                 Read more
               </Link>
             </div>

@@ -1,5 +1,4 @@
 import BackBtn from "@/components/BackBtn";
-import Loading from "./loading";
 
 const BlogPost = () => {
   return (
