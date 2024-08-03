@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(font.className, "flex min-h-screen flex-col")}>
+    <html lang="en" className="h-full">
+      <body className={cn(font.className, "flex h-full min-h-screen flex-col")}>
         <Navigation />
         <main className="h-full flex-1">{children}</main>
         <Footer />

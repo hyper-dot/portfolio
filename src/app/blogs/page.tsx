@@ -25,25 +25,27 @@ const blogs = [
 
 const BlogList = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center bg-gray-100 py-10">
-      <h1 className="mb-8 text-4xl font-semibold">
-        <span>Some words that I&apos;ve written beside codes</span>
-      </h1>
-      <div className="w-full max-w-3xl space-y-8 rounded-lg p-6">
-        {blogs.map((blog) => (
-          <div key={blog.id} className="mb-6">
-            <h2 className="flex items-center text-2xl font-semibold">
-              {blog.title}
-            </h2>
-            <p className="text-gray-700">{blog.description}</p>
-            <Link
-              href=""
-              className="relative before:absolute before:bottom-0 before:h-[1px] before:w-0 before:bg-black before:transition-width before:duration-300 hover:before:w-full"
-            >
-              Read more
-            </Link>
-          </div>
-        ))}
+    <div className="">
+      <div className="mx-auto max-w-3xl pt-10">
+        <h1 className="mb-8 text-4xl font-semibold">
+          <span>Some words that I&apos;ve written beside codes</span>
+        </h1>
+        <div className="w-full space-y-8 rounded-lg pt-6">
+          {blogs.map((blog) => (
+            <div key={blog.id}>
+              <h2 className="flex items-center text-2xl font-semibold">
+                {blog.title}
+              </h2>
+              <p className="text-gray-700">{blog.description}</p>
+              <Link
+                href=""
+                className="relative before:absolute before:bottom-0 before:h-[1px] before:w-1/2 before:bg-black before:transition-width before:duration-300 hover:before:w-full"
+              >
+                Read more
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
