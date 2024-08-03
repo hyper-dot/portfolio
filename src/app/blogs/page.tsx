@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { FaFeather } from "react-icons/fa";
 
 const blogs = [
   {
@@ -37,10 +36,7 @@ const BlogList = () => {
                 {blog.title}
               </h2>
               <p className="text-gray-700">{blog.description}</p>
-              <Link
-                href=""
-                className="relative before:absolute before:bottom-0 before:h-[1px] before:w-1/2 before:bg-black before:transition-width before:duration-300 hover:before:w-full"
-              >
+              <Link href="/blogs/id" className="underline underline-offset-2">
                 Read more
               </Link>
             </div>
