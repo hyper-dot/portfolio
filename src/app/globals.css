@@ -124,7 +124,7 @@
 
 .content {
   code {
-    @apply px-2 py-[2px] text-sm bg-primary/80 rounded-md !important
+    @apply px-2 py-[2px] text-sm bg-primary/80 text-white whitespace-nowrap rounded-md !important
   }
 }
 

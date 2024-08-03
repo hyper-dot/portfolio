@@ -1,20 +1,25 @@
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const contacts = [
   {
     title: "Github",
     icon: <FaGithub size={20} />,
-    link: "",
+    link: "https://github.com/hyper-dot",
   },
   {
     title: "Linkedin",
     icon: <FaLinkedin size={20} />,
-    link: "",
+    link: "https://www.linkedin.com/in/roshan-paudel-200186167",
   },
   {
     title: "Whatsapp",
     icon: <FaWhatsapp size={20} />,
-    link: "",
+    link: "https://wa.me/9864175818",
+  },
+  {
+    title: "Youtube",
+    icon: <FaYoutube size={20} />,
+    link: "https://www.youtube.com/channel/UCGv-g37PzdwiJ2LkJChH-ug",
   },
 ];
 
