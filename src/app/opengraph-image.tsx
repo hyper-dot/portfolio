@@ -43,17 +43,6 @@ export default async function Image() {
           overflow: "hidden",
         }}
       >
-        <img
-          style={{
-            height: "150px",
-            width: "150px",
-            borderRadius: "50%",
-            objectFit: "cover",
-            border: "3px solid #eee",
-          }}
-          src="https://avatars.githubusercontent.com/u/65642985?s=400&u=7f52b492466a8a6082a61b512046e026ec15c4fc&v=4"
-          alt="Roshan Paudel"
-        />
         <div style={{ marginTop: "20px", color: "#333" }}>Roshan Paudel</div>
         <div
           style={{
