@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { BASE_URL } from "@/constants";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://rosanpaudel.com/sitemap.xml",
+    sitemap: [BASE_URL + "/sitemap.xml", BASE_URL + "/blogs/sitemap.xml"],
   };
 }
