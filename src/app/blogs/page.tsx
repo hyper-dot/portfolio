@@ -1,8 +1,12 @@
 import { connectdb } from "@/lib/db";
 import Link from "next/link";
 import Blog from "../models/Blog";
+import { format } from "date-fns";
 
 import { unstable_noStore as nostore } from "next/cache";
+import Loading from "./loading";
+import { Calendar } from "lucide-react";
+
 export const dynamic = "force-dynamic";
 
 export default async function Page() {
@@ -20,10 +24,15 @@ export default async function Page() {
         <div className="w-full space-y-8 rounded-lg pt-6">
           {blogs.map((blog) => (
             <div key={blog.id}>
+              <span className="flex items-center gap-1 text-sm">
+                <Calendar size={16} strokeWidth={1} />
+                {format(blog.createdAt, "dd, MMM, yyyy")}
+              </span>
               <h2 className="flex items-center text-2xl font-semibold">
                 {blog.title}
               </h2>
-              <p className="text-lg text-gray-700">{blog.desc}</p>
+              <p className="line-clamp-3 text-lg text-gray-700">{blog.desc}</p>
+
               <Link
                 href={`/blogs/${blog.slug}`}
                 className="underline underline-offset-2"
