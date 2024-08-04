@@ -119,7 +119,7 @@
 }
 
 .content>pre {
-  @apply max-w-full relative text-white overflow-auto bg-primary/90 !important
+  @apply max-w-full relative text-white overflow-auto bg-neutral-900/90 !important
 }
 
 .content {
@@ -135,8 +135,14 @@
 
 /* styles.css */
 .background-div {
-  background: url(/orange.svg) 100% 110%/50% no-repeat, url(/purple.svg) 0% 50%/60% no-repeat;
+  background: url(/orange.svg) 100% 100%/50% no-repeat, url(/purple.svg) 0% 50%/60% no-repeat;
   background-attachment: fixed, fixed;
+}
+
+.dark .background-div {
+  background: url(/orange.svg) 90% 110%/50% no-repeat, url(/purple.svg) 0% 50%/60% no-repeat;
+  background-attachment: fixed, fixed;
+
 }
 
 @media (max-width: 768px) {

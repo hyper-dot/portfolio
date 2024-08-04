@@ -4,6 +4,8 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/providers/ThemeProvider";
+import ScrollButton from "@/components/ScrollToTop";
 
 const font = Josefin_Slab({ subsets: ["latin"] });
 
@@ -19,11 +21,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={cn(font.className, "flex min-h-screen flex-col")}>
-        <Navigation />
-        <main className="flex flex-1 flex-col">{children}</main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navigation />
+          <main className="flex flex-1 flex-col">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

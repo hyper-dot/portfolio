@@ -9,20 +9,22 @@ const MenuIcon = ({ open, setOpen }: { open: boolean; setOpen: any }) => {
     >
       <span
         className={cn(
-          "block h-[3px] w-full rounded-3xl bg-black transition-all duration-500",
-          open ? "translate-y-[0.3rem] rotate-45 bg-white" : "",
+          "block h-[3px] w-full rounded-3xl bg-primary transition-all duration-500",
+          open ? "translate-y-[0.3rem] rotate-45 bg-primary-foreground" : "",
         )}
       ></span>
       <span
         className={cn(
-          "block h-[3px] w-[90%] -translate-x-1 rounded-3xl bg-black transition-all duration-500",
-          open ? "absolute bg-white opacity-0" : "static opacity-100",
+          "block h-[3px] w-[90%] -translate-x-1 rounded-3xl bg-primary transition-all duration-500",
+          open
+            ? "absolute bg-primary-foreground opacity-0"
+            : "static opacity-100",
         )}
       ></span>
       <span
         className={cn(
-          "block h-[3px] w-full rounded-3xl bg-black transition-all duration-500",
-          open ? "-translate-y-[0.4rem] -rotate-45 bg-white" : "",
+          "block h-[3px] w-full rounded-3xl bg-primary transition-all duration-500",
+          open ? "-translate-y-[0.4rem] -rotate-45 bg-primary-foreground" : "",
         )}
       ></span>
     </button>

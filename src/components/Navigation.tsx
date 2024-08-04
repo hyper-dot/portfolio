@@ -6,6 +6,7 @@ import { useState } from "react";
 import Logo from "./Logo";
 import { IoIosChatbubbles } from "react-icons/io";
 import MenuIcon from "./MenuIcon";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const menus = [
   { title: "Home", to: "/" },
@@ -20,22 +21,24 @@ const Navigation = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between bg-white px-8 py-4">
+    <nav className="z-50 flex items-center justify-between px-8 py-4">
       <Logo />
 
       <h1 className="flex-1 -translate-x-[20px] text-center">
         {menus.find((m) => m.to == pathname)?.title}
       </h1>
 
+      <ThemeSwitcher />
+
       <MenuIcon open={open} setOpen={setOpen} />
 
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-primary transition-all duration-500",
+          "fixed inset-0 z-40 transition-all duration-500",
           open ? "clip-path-circle-open" : "clip-path-circle-close",
         )}
       >
-        <ul className="flex h-full flex-col items-center justify-center gap-12 text-5xl font-thin text-white">
+        <ul className="flex h-full flex-col items-center justify-center gap-12 bg-primary text-5xl font-thin text-primary-foreground">
           {menus.map((item, idx) => (
             <li key={idx} className="relative">
               <Link
@@ -51,17 +54,6 @@ const Navigation = () => {
               </Link>
             </li>
           ))}
-
-          {/* <li className="flex items-center gap-2">
-            <IoIosChatbubbles size={52} />
-            <Link href="" onClick={() => setOpen(false)}>
-              Say Hi
-            </Link>
-          </li> */}
-
-          {/* <li>
-            <LiveSupport />
-          </li> */}
         </ul>
       </div>
     </nav>

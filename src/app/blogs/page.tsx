@@ -24,14 +24,16 @@ export default async function Page() {
         <div className="w-full space-y-8 rounded-lg pt-6">
           {blogs.map((blog) => (
             <div key={blog.id}>
-              <span className="flex items-center gap-1 text-sm">
+              <span className="flex items-center gap-1 text-xs">
                 <Calendar size={16} strokeWidth={1} />
                 {format(blog.createdAt, "dd, MMM, yyyy")}
               </span>
               <h2 className="flex items-center text-2xl font-semibold">
                 {blog.title}
               </h2>
-              <p className="line-clamp-3 text-lg text-gray-700">{blog.desc}</p>
+              <p className="line-clamp-3 text-lg text-muted-foreground">
+                {blog.desc}
+              </p>
 
               <Link
                 href={`/blogs/${blog.slug}`}
