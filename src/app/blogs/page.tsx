@@ -4,7 +4,6 @@ import Blog from "../models/Blog";
 import { format } from "date-fns";
 
 import { unstable_noStore as nostore } from "next/cache";
-import Loading from "./loading";
 import { Calendar } from "lucide-react";
 
 export const dynamic = "force-dynamic";
