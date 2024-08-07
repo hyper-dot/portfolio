@@ -2,6 +2,7 @@ export const data = {
   workExperience: [
     {
       logo: "https://sandconsole.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsandconsole-logo-blue.5c89443a.svg&w=384&q=75",
+      location: "Kathmandu Nepal (remote)",
       company: "Frontend Developer",
       url: "https://sandconsole.com",
       title: "Frontend Developer (Next.js)",
@@ -10,6 +11,7 @@ export const data = {
     },
     {
       logo: "https://metalogic.com.np/metalogo.png",
+      location: "Lalitpur, Nepal",
       company: "Metalogic Software",
       url: "https://metalogic.com.np",
       title: "Full Stack Developer (Node & React)",
@@ -18,6 +20,7 @@ export const data = {
     },
     {
       logo: "https://media.licdn.com/dms/image/C4D0BAQFVBaWozNJXfg/company-logo_200_200/0/1630545258536/startuphire_logo?e=1724889600&v=beta&t=pZQwoZRmyFNjiiLZzDe74ykDU2uFOI3X5lCvd0slf7Y",
+      location: "California USA (remote)",
       company: "StartupHire",
       title: "Frontend Developer",
       url: "https://www.linkedin.com/company/startuphire/about",
@@ -26,6 +29,7 @@ export const data = {
     },
     {
       logo: "https://media.licdn.com/dms/image/C4D0BAQFVBaWozNJXfg/company-logo_200_200/0/1630545258536/startuphire_logo?e=1724889600&v=beta&t=pZQwoZRmyFNjiiLZzDe74ykDU2uFOI3X5lCvd0slf7Y",
+      location: "California USA (remote)",
       company: "StartupHire",
       title: "Frontend Developer Intern",
       url: "https://www.linkedin.com/company/startuphire/about",

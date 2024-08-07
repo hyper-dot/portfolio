@@ -71,6 +71,7 @@ export default function page() {
                 </div>
                 <div className="text-left">
                   <h3 className="text-lg font-semibold">{item.title}</h3>
+                  <p className="text-xs sm:text-right">{item.location}</p>
                   {/*                 <p className="text-gray-600">{item.description}</p> */}
                 </div>
               </FadeIn>
