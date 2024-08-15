@@ -4,7 +4,6 @@ import Blog from "@/app/models/Blog";
 import "highlight.js/styles/github-dark.css";
 
 import { unstable_noStore as nostore } from "next/cache";
-import ScrollButton from "@/components/ScrollToTop";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
