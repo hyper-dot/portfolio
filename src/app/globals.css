@@ -73,17 +73,17 @@
 
 @keyframes scale-up {
   0% {
-    clip-path: circle(0% at 100% 0);
+    clip-path: circle(0% at 98% 5%);
   }
 
   100% {
-    clip-path: circle(150% at 100% 0);
+    clip-path: circle(150% at 98% 5%);
   }
 }
 
 @keyframes scale-down {
   0% {
-    clip-path: circle(150% at 100% 0);
+    clip-path: circle(150% at 98% 5%);
   }
 
   100% {
