@@ -3,7 +3,7 @@ export const data = {
     {
       logo: "https://sandconsole.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsandconsole-logo-blue.5c89443a.svg&w=384&q=75",
       location: "Kathmandu Nepal (remote)",
-      company: "Frontend Developer",
+      company: "Sand Console",
       url: "https://sandconsole.com",
       title: "Frontend Developer (Next.js)",
       from: "July 2024",
