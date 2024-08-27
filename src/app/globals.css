@@ -87,17 +87,15 @@
   }
 
   100% {
-    clip-path: circle(0% at 100% 0);
+    clip-path: circle(0% at 98% 5%);
   }
 }
 
 .clip-path-circle-open {
-  clip-path: circle(150% at 100% 0);
   animation: scale-up 0.7s forwards;
 }
 
 .clip-path-circle-close {
-  clip-path: circle(0% at 100% 0);
   animation: scale-down 0.7s forwards;
 }
 

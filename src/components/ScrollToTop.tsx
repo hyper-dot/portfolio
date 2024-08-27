@@ -19,7 +19,7 @@ const ScrollButton = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
+    document.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
   if (isVisible) {
