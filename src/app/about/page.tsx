@@ -40,16 +40,18 @@ export default function page() {
                 key={index}
                 className="mb-12 flex flex-col items-start gap-y-2 sm:flex-row"
               >
-                <img
-                  src={item.logo}
-                  alt={item.company}
-                  className={cn(
-                    "mr-6 h-12 w-12 rounded-full",
-                    item.company === "Metalogic Software"
-                      ? "h-[2.6rem] w-[2.6rem]"
-                      : "",
-                  )}
-                />
+                <a href={item.url} target="_blank">
+                  <img
+                    src={item.logo}
+                    alt={item.company}
+                    className={cn(
+                      "mr-6 h-12 w-12 rounded-full",
+                      item.company === "Metalogic Software"
+                        ? "h-[2.6rem] w-[2.6rem]"
+                        : ""
+                    )}
+                  />
+                </a>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold">{item.company}</h3>
                   <time className="flex gap-2 text-muted-foreground">

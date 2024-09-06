@@ -28,7 +28,7 @@ export const data = {
       to: "Feb 2023",
     },
     {
-      logo: "https://media.licdn.com/dms/image/C4D0BAQFVBaWozNJXfg/company-logo_200_200/0/1630545258536/startuphire_logo?e=1724889600&v=beta&t=pZQwoZRmyFNjiiLZzDe74ykDU2uFOI3X5lCvd0slf7Y",
+      logo: "https://avatars.githubusercontent.com/u/140021323?s=48&v=10",
       location: "California USA (remote)",
       company: "StartupHire",
       title: "Frontend Developer Intern",
