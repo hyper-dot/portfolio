@@ -26,7 +26,7 @@ const PortfolioSection = () => {
                   />
                 </div>
               </SheetTrigger>
-              <SheetContent className="min-w-[90vw] md:min-w-[80vw] lg:min-w-[50vw]">
+              <SheetContent className="min-w-[90vw] overflow-auto md:min-w-[80vw] lg:min-w-[50vw]">
                 <SheetHeader>
                   <SheetTitle className="text-3xl">{item.title}</SheetTitle>
                   <SheetDescription className="text-lg">
