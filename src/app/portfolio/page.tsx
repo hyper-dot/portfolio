@@ -8,6 +8,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import Image from "next/image";
 
 const PortfolioSection = () => {
   return (
@@ -20,8 +21,9 @@ const PortfolioSection = () => {
               <SheetTrigger>
                 <div className="group relative cursor-pointer rounded-md border shadow-lg">
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10"></div>
-                  <video
-                    src={item.image}
+                  <Image
+                    alt={item.title}
+                    src={item.thumbnail}
                     className="h-full w-full rounded-md object-cover"
                   />
                 </div>
@@ -35,7 +37,7 @@ const PortfolioSection = () => {
                 </SheetHeader>
                 <div className="mt-8">
                   <video
-                    src={item.image}
+                    src={item.video}
                     className="h-full w-full rounded-md border object-cover"
                     controls
                     autoPlay
