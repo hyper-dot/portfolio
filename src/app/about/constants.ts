@@ -1,7 +1,7 @@
 export const data = {
   workExperience: [
     {
-      logo: "https://sandconsole.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsandconsole-logo-blue.5c89443a.svg&w=384&q=75",
+      logo: "https://sandconsole.com/icons/wood-mark-logo.jpg",
       location: "Kathmandu Nepal (remote)",
       company: "Sand Console",
       url: "https://sandconsole.com",
