@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Josefin_Slab } from "next/font/google";
+import { Josefin_Slab, Nunito } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 
-const font = Josefin_Slab({ subsets: ["latin"] });
+// const font = Josefin_Slab({ subsets: ["latin"] });
+const font = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rosanpaudel.com.np"),

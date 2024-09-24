@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <h1 className="text-4xl md:text-4xl 2xl:text-6xl">{blog.title}</h1>
 
       <div
-        className="content prose-lg mt-20 md:prose-xl 2xl:prose-2xl"
+        className="content prose-lg mt-20 2xl:prose-xl"
         dangerouslySetInnerHTML={{ __html: blog.body }}
       ></div>
     </div>
