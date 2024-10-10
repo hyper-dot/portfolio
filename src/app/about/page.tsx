@@ -6,7 +6,7 @@ export default function page() {
   return (
     <div className="mt-10">
       <h1 className="mb-8 text-center text-4xl font-semibold">My Story</h1>
-      <FadeIn className="mx-auto max-w-3xl">
+      <FadeIn className="mx-auto max-w-3xl px-2 text-neutral-700">
         As a developer with full-stack expertise in the <b>MERN </b> stack,
         <b>TypeScript</b> , and <b>PostgreSQL</b> & <b>Mongodb</b> , I&apos;ve
         excelled in remote environments at StartupHire, Metalogic, and Sand

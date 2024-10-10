@@ -7,14 +7,14 @@ import HomeAnimation from "@/components/HomeAnimation";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 items-center justify-center bg-gradient-to-br from-background to-secondary/20 p-4">
+    <div className="flex flex-1 items-center justify-center px-2 md:pt-[10%]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="gap-10 text-center md:grid md:grid-cols-2"
       >
-        <div className="hidden -translate-y-1/3 transition-all duration-500 hover:inset-0 md:block">
+        <div className="hidden -translate-y-1/4 transition-all duration-500 hover:inset-0 md:block">
           <HomeAnimation />
         </div>
 
@@ -27,7 +27,7 @@ export default function Home() {
             Crafting elegant solutions to complex problems. Passionate about
             clean code, user experience, and continuous learning.
           </p>
-          {/* <div className="flex justify-center space-x-4">
+          <div className="flex justify-center space-x-4">
             <Button variant="outline" size="icon" asChild>
               <a
                 href="https://github.com/hyper-dot"
@@ -53,7 +53,7 @@ export default function Home() {
                 <Mail className="h-5 w-5" />
               </a>
             </Button>
-          </div> */}
+          </div>
         </div>
       </motion.div>
     </div>

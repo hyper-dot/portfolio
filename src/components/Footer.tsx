@@ -1,3 +1,5 @@
+"use client";
+import { usePathname } from "next/navigation";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const contacts = [
@@ -24,17 +26,20 @@ const contacts = [
 ];
 
 const Footer = () => {
+  const pathname = usePathname();
   return (
     <footer className="py-8 text-center text-sm">
-      <ul className="mb-2 flex items-center justify-center gap-4">
-        {contacts.map((item, idx) => (
-          <li key={idx}>
-            <a target="_blank" href={item.link}>
-              {item.icon}
-            </a>
-          </li>
-        ))}
-      </ul>
+      {pathname !== "/" && (
+        <ul className="mb-2 flex items-center justify-center gap-4">
+          {contacts.map((item, idx) => (
+            <li key={idx}>
+              <a target="_blank" href={item.link}>
+                {item.icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
       <p>
         &copy; {new Date().getFullYear()} Roshan Paudel. All rights reserved.
       </p>
