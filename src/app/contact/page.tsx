@@ -37,7 +37,7 @@ export default function Page() {
             type="text"
             id="name"
             name="name"
-            className="w-full border-b-2 border-gray-300 bg-transparent px-0 py-2 text-lg transition-colors focus:border-blue-500 focus:outline-none"
+            className="w-full border-b-2 border-gray-300 bg-transparent px-0 py-2 text-lg transition-colors focus:border-neutral-700 focus:outline-none"
             placeholder="Enter your name"
           />
         </div>
@@ -50,7 +50,7 @@ export default function Page() {
             type="email"
             id="email"
             name="email"
-            className="w-full border-b-2 border-gray-300 bg-transparent px-0 py-2 text-lg transition-colors focus:border-blue-500 focus:outline-none"
+            className="w-full border-b-2 border-gray-300 bg-transparent px-0 py-2 text-lg transition-colors focus:border-neutral-700 focus:outline-none"
             placeholder="Enter your email"
           />
         </div>
@@ -66,7 +66,7 @@ export default function Page() {
             id="message"
             name="message"
             rows={4}
-            className="w-full resize-none border-b-2 border-gray-300 bg-transparent px-0 py-2 text-lg transition-colors focus:border-blue-500 focus:outline-none"
+            className="w-full resize-none border-b-2 border-gray-300 bg-transparent px-0 py-2 text-lg transition-colors focus:border-neutral-700 focus:outline-none"
             placeholder="Enter your message"
           ></textarea>
         </div>
