@@ -6,28 +6,14 @@ export default function page() {
   return (
     <div className="mt-10">
       <h1 className="mb-8 text-center text-4xl font-semibold">My Story</h1>
-      <FadeInStagger className="mx-auto mt-10 max-w-3xl space-y-6 px-4">
-        <FadeIn role="contentinfo" className="max-w-lg">
-          I am Roshan Paudel, a passionate Fullstack web developer and Linux
-          enthusiast with expertise in the MERN stack, TypeScript, TypeORM, and
-          PostgreSQL. Currently, I am working as a mid-level frontend developer,
-          excelling in both frontend and backend technologies, including React,
-          Next.js, Node.js, and Express.js.
-        </FadeIn>
-        <FadeIn role="contentinfo" className="ml-auto max-w-lg">
-          My experience at <strong>StartupHire</strong> ,{" "}
-          <strong>Metalogic</strong>, and{" "}
-          <strong className="whitespace-nowrap">Sand Console</strong> has
-          equipped me to excel in remote, collaborative environments. I have
-          contributed to numerous high-quality projects, showcasing my ability
-          to create dynamic and responsive web applications. I am committed to
-          continuous learning and thrive on projects that challenge my skills
-          and foster collaboration. I am open to opportunities to apply my
-          expertise, contribute to innovative solutions, and grow
-          professionally.
-        </FadeIn>
-      </FadeInStagger>
-
+      <FadeIn className="mx-auto max-w-3xl">
+        As a developer with full-stack expertise in the <b>MERN </b> stack,
+        <b>TypeScript</b> , and <b>PostgreSQL</b> & <b>Mongodb</b> , I&apos;ve
+        excelled in remote environments at StartupHire, Metalogic, and Sand
+        Console, creating dynamic web applications. A <b>Linux</b> enthusiast
+        passionate about continuous learning, I seek opportunities to apply my
+        React and Node.js expertise while contributing to innovative solutions.
+      </FadeIn>
       <div className="mx-auto mb-12 mt-10 flex max-w-3xl flex-col gap-8 px-4">
         <section className="w-full">
           <h2 className="mb-6 text-center text-2xl font-semibold">
@@ -48,7 +34,7 @@ export default function page() {
                       "mr-6 h-12 w-12 rounded-full",
                       item.company === "Metalogic Software"
                         ? "h-[2.6rem] w-[2.6rem]"
-                        : ""
+                        : "",
                     )}
                   />
                 </a>

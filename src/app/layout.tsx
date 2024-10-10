@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import { cn } from "@/lib/utils";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import { ToasterWithLimit } from "@/components/ToasterWithLimits";
 
 // const font = Josefin_Slab({ subsets: ["latin"] });
 const font = Nunito({ subsets: ["latin"] });
@@ -31,6 +32,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navigation />
+          <ToasterWithLimit />
           <main className="flex flex-1 flex-col">{children}</main>
           <Footer />
         </ThemeProvider>

@@ -25,7 +25,7 @@ const Navigation = () => {
       <Logo />
 
       <h1 className="flex-1 -translate-x-[20px] text-center">
-        {menus.find((m) => m.to == pathname)?.title}
+        {menus.find((m) => m.to == pathname && m.to !== "/")?.title}
       </h1>
 
       <ThemeSwitcher />
