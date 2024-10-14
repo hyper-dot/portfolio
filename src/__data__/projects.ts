@@ -8,9 +8,16 @@ export const projects = [
     title: "Ez Books",
     description:
       "Ez Books is an all-in-one platform for small businesses, simplifying operations like inventory management, sales and purchase tracking, and billing. Built with Next.js, React Query, and Redux Toolkit, it provides efficient dashboards and performance tracking, helping businesses streamline processes and focus on growth.",
-    techStack: ["Next.js", "React Query", "Redux Toolkit", "Tailwind"],
+    techStack: ["Next.js", "Tanstack Query", "Shadcn UI", "Tailwind"],
     liveLink: "https://ezbooks.rosanpaudel.com.np",
     codeLink: "https://github.com/hyper-dot/books",
+    features: [
+      "All-in-one platform for small businesses to manage inventory, sales, purchases, and billing.",
+      "Efficient dashboards for performance tracking and decision-making.",
+      "Built with Next.js for server-side rendering and optimized performance.",
+      "React Query efficient data fetching & caching.",
+      "Responsive design powered by Tailwind CSS for mobile-friendly user experience.",
+    ],
   },
   {
     video: "/videos/monsoon-logistics.mp4",
@@ -21,6 +28,12 @@ export const projects = [
     techStack: ["Next.js", "Tailwind", "Lottie", "OpenAI"],
     liveLink: "https://monsoon-logistics.vercel.app/",
     // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
+    features: [
+      "Dynamic Lottie animations for a modern, engaging user experience.",
+      "AI-powered chatbot integration for seamless user interaction.",
+      "Built with Next.js for optimized performance and scalability.",
+      "Responsive design with Tailwind CSS for a mobile-friendly interface.",
+      "Easy-to-navigate landing page with interactive elements for shipment tracking.",
+    ],
   },
-  // Add more projects as needed
 ];

@@ -1,4 +1,3 @@
-import { FaGithub, FaRegEye } from "react-icons/fa";
 import { projects } from "@/__data__/projects";
 import {
   Sheet,
@@ -9,6 +8,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Eye, Github } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 
 const PortfolioSection = () => {
   return (
@@ -28,55 +30,48 @@ const PortfolioSection = () => {
                   />
                 </div>
               </SheetTrigger>
-              <SheetContent className="min-w-[90vw] overflow-auto md:min-w-[80vw] lg:min-w-[50vw]">
+              <SheetContent className="overflow-y-auto sm:max-w-[800px]">
                 <SheetHeader>
-                  <SheetTitle className="text-3xl">{item.title}</SheetTitle>
-                  <SheetDescription className="text-lg">
-                    {item.description}
-                  </SheetDescription>
+                  <SheetTitle className="text-2xl font-bold">
+                    {item.title}
+                  </SheetTitle>
                 </SheetHeader>
-                <div className="mt-8">
+                <SheetDescription className="mt-4 text-base">
+                  {item.description}
+                </SheetDescription>
+                <div className="mt-6">
                   <video
                     src={item.video}
                     className="h-full w-full rounded-md border object-cover"
                     controls
                     autoPlay
                   />
-
-                  <div className="my-3 flex gap-4">
-                    <a
-                      target="_blank"
-                      className="flex items-center gap-2 rounded-lg border bg-green-300 p-1 px-2 font-semibold text-black"
-                      href={item.liveLink}
-                    >
-                      Live
-                      <FaRegEye size={20} />
-                    </a>
-                    {!!item.codeLink && (
-                      <a
-                        className="flex items-center gap-2 rounded-lg border bg-neutral-800 p-1 px-2 text-white"
-                        target="_blank"
-                        href={item.codeLink}
-                      >
-                        Github
-                        <FaGithub size={20} />
-                      </a>
-                    )}
+                </div>
+                <div className="mt-4 flex gap-2">
+                  <Button variant="default">
+                    <Eye className="mr-2 h-4 w-4" /> Live Demo
+                  </Button>
+                  <Button variant="outline">
+                    <Github className="mr-2 h-4 w-4" /> View Code
+                  </Button>
+                </div>
+                <div className="mt-6">
+                  <h3 className="mb-2 text-lg font-semibold">Tech Stack</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {item.techStack.map((tech) => (
+                      <Badge key={tech} variant="secondary">
+                        {tech}
+                      </Badge>
+                    ))}
                   </div>
-
-                  <div className="mt-8">
-                    <h4 className="text-lg font-medium">Tech Stack:</h4>
-                    <ul className="mt-2 flex space-x-2">
-                      {item.techStack.map((tech, techIndex) => (
-                        <li
-                          key={techIndex}
-                          className="whitespace-nowrap rounded-full bg-secondary px-3 py-1 text-sm font-medium"
-                        >
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                </div>
+                <div className="mt-6">
+                  <h3 className="mb-2 text-lg font-semibold">Key Features</h3>
+                  <ul className="list-disc space-y-1 pl-5">
+                    {item.features.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               </SheetContent>
             </Sheet>
