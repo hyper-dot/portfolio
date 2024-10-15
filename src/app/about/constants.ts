@@ -15,8 +15,8 @@ export const data = {
       company: "Metalogic Software",
       url: "https://metalogic.com.np",
       title: "Full Stack Developer (Node & React)",
-      from: "Feb 2023",
-      to: "Jul 2023",
+      from: "Feb 2024",
+      to: "Jul 2024",
     },
     {
       logo: "https://avatars.githubusercontent.com/u/140021323?s=100&v=10",
@@ -24,8 +24,8 @@ export const data = {
       company: "StartupHire",
       title: "Frontend Developer",
       url: "https://www.linkedin.com/company/startuphire/about",
-      from: "Jan 2023",
-      to: "Feb 2023",
+      from: "Jan 2024",
+      to: "Feb 2024",
     },
     {
       logo: "https://avatars.githubusercontent.com/u/140021323?s=100&v=10",
