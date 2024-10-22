@@ -1,4 +1,5 @@
 "use client";
+import { getIpAddress } from "@/action";
 import { usePathname } from "next/navigation";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
@@ -26,6 +27,7 @@ const contacts = [
 ];
 
 const Footer = () => {
+  getIpAddress().then((ip) => console.log("IP ADDRESS: ", ip));
   const pathname = usePathname();
   return (
     <footer className="py-8 text-center text-sm">

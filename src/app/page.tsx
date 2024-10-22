@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import HomeAnimation from "@/components/HomeAnimation";
-import { getIpAddress } from "@/action";
 
 export default function Home() {
-  getIpAddress().then((ip) => console.log("IP ADDRESS: ", ip));
   return (
     <div className="flex flex-1 items-center justify-center px-2 md:pt-[10%]">
       <motion.div
