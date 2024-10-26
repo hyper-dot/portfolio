@@ -26,7 +26,8 @@ const contacts = [
   },
 ];
 
-const Footer = () => {
+const Footer = ({ country }: { country: string }) => {
+  console.log("COUNTRY", country);
   getIpAddress().then((ip) => console.log("IP ADDRESS: ", ip));
   const pathname = usePathname();
   return (

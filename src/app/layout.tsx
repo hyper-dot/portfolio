@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
@@ -24,6 +25,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const country = headers().get("CF-IPCountry");
   return (
     <html lang="en" className="scroll-smooth">
       <body className={cn(font.className, "flex min-h-screen flex-col")}>
@@ -36,7 +38,7 @@ export default function RootLayout({
           <Navigation />
           <ToasterWithLimit />
           <main className="flex flex-1 flex-col">{children}</main>
-          <Footer />
+          <Footer country={country} />
         </ThemeProvider>
       </body>
     </html>
