@@ -38,7 +38,7 @@ export default function RootLayout({
           <Navigation />
           <ToasterWithLimit />
           <main className="flex flex-1 flex-col">{children}</main>
-          <Footer country={country} />
+          <Footer country={country!} />
         </ThemeProvider>
       </body>
     </html>
