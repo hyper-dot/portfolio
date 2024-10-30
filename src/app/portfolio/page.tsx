@@ -48,12 +48,12 @@ const PortfolioSection = () => {
                   />
                 </div>
                 <div className="mt-4 flex gap-2">
-                  <Button variant="default">
+                  <Button variant="default" asChild>
                     <a target="_blank" href={item.liveLink}>
                       <Eye className="mr-2 h-4 w-4" /> Live Demo
                     </a>
                   </Button>
-                  <Button variant="outline">
+                  <Button variant="outline" asChild>
                     <a target="_blank" href={item.codeLink}>
                       <Github className="mr-2 h-4 w-4" /> View Code
                     </a>
