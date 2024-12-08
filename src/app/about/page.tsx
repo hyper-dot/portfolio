@@ -1,6 +1,7 @@
 import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 import { data } from "./constants";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export default function page() {
   return (
@@ -28,7 +29,9 @@ export default function page() {
                 className="mb-12 flex flex-col items-start gap-y-2 sm:flex-row"
               >
                 <a href={item.url} target="_blank">
-                  <img
+                  <Image
+                    height={200}
+                    width={200}
                     src={item.logo}
                     alt={item.company}
                     className={cn(

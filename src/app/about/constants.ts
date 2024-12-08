@@ -1,7 +1,7 @@
 export const data = {
   workExperience: [
     {
-      logo: "https://sandconsole.com/icons/wood-mark-logo.jpg",
+      logo: "/sand-console.jpg",
       location: "Kathmandu Nepal (remote)",
       company: "Sand Console",
       url: "https://sandconsole.com",
@@ -10,31 +10,13 @@ export const data = {
       to: "Present",
     },
     {
-      logo: "https://metalogic.com.np/metalogo.png",
-      location: "Lalitpur, Nepal",
-      company: "Metalogic Software",
-      url: "https://metalogic.com.np",
-      title: "Full Stack Developer (Node & React)",
-      from: "Feb 2024",
-      to: "Jul 2024",
-    },
-    {
       logo: "https://avatars.githubusercontent.com/u/140021323?s=100&v=10",
       location: "California USA (remote)",
       company: "StartupHire",
       title: "Frontend Developer",
       url: "https://www.linkedin.com/company/startuphire/about",
-      from: "Jan 2024",
-      to: "Feb 2024",
-    },
-    {
-      logo: "https://avatars.githubusercontent.com/u/140021323?s=100&v=10",
-      location: "California USA (remote)",
-      company: "StartupHire",
-      title: "Frontend Developer Intern",
-      url: "https://www.linkedin.com/company/startuphire/about",
       from: "Sep 2023",
-      to: "Dec 2023",
+      to: "May 2024",
     },
   ],
   skills: {
