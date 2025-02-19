@@ -1,61 +1,71 @@
-"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { Github, Linkedin, Twitter } from "lucide-react";
+import { FadeIn, FadeInStagger } from "@/components/FadeIn";
 
-import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import HomeAnimation from "@/components/HomeAnimation";
-
-export default function Home() {
+const page = () => {
   return (
-    <div className="flex flex-1 items-center justify-center px-2 md:pt-[10%]">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="gap-10 text-center md:grid md:grid-cols-2"
-      >
-        <div className="hidden -translate-y-1/4 transition-all duration-500 hover:inset-0 md:block">
-          <HomeAnimation />
-        </div>
+    <FadeInStagger faster className="mt-32 flex flex-1 flex-col gap-4 px-16">
+      <FadeIn>
+        <Image
+          height={100}
+          width={150}
+          src="/profile2.png"
+          alt="Roshan Paudel profile picture"
+          className="aspect-[12/16] rounded-2xl object-cover"
+          priority
+        />
+      </FadeIn>
 
-        <div>
-          <h1 className="mb-2 text-4xl font-bold">Roshan Paudel</h1>
-          <p className="mb-6 text-xl text-muted-foreground">
-            Full Stack Developer
-          </p>
-          <p className="mx-auto mb-8 max-w-md text-muted-foreground">
-            Crafting elegant solutions to complex problems. Passionate about
-            clean code, user experience, and continuous learning.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <Button variant="outline" size="icon" asChild>
-              <a
-                href="https://github.com/hyper-dot"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <a
-                href="https://www.linkedin.com/in/roshan-paudel-200186167/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button variant="outline" size="icon" asChild>
-              <a href="mailto:rozanpoudel@gmail.com" aria-label="Email">
-                <Mail className="h-5 w-5" />
-              </a>
-            </Button>
-          </div>
+      <FadeIn className="text-7xl font-bold">
+        Hi there, <br /> I&apos;m Roshan Paudel
+      </FadeIn>
+
+      {/* Add social links and available now status */}
+      <FadeIn className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
+          <span className="relative flex h-3 w-3">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
+          </span>
+          <span className="text-sm">Available for work</span>
         </div>
-      </motion.div>
-    </div>
+      </FadeIn>
+
+      <FadeIn className="flex gap-4">
+        <Link
+          href="https://github.com/yourusername"
+          target="_blank"
+          className="text-2xl hover:text-primary"
+        >
+          <Github size={24} />
+        </Link>
+        <Link
+          href="https://linkedin.com/in/yourusername"
+          target="_blank"
+          className="text-2xl hover:text-primary"
+        >
+          <Linkedin size={24} />
+        </Link>
+        <Link
+          href="https://twitter.com/yourusername"
+          target="_blank"
+          className="text-2xl hover:text-primary"
+        >
+          <Twitter size={24} />
+        </Link>
+      </FadeIn>
+
+      <FadeIn className="mt-10">
+        <Link
+          href="/portfolio"
+          className="w-fit rounded-full border border-primary px-8 py-4 text-xl font-semibold"
+        >
+          Discover My Projects
+        </Link>
+      </FadeIn>
+    </FadeInStagger>
   );
-}
+};
+
+export default page;

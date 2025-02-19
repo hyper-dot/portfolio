@@ -28,18 +28,20 @@ export default function RootLayout({
   const country = headers().get("CF-IPCountry");
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={cn(font.className, "flex min-h-screen flex-col")}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navigation />
-          <ToasterWithLimit />
-          <main className="flex flex-1 flex-col">{children}</main>
-          <Footer country={country!} />
-        </ThemeProvider>
+      <body className={cn(font.className, "overflow-y-scroll")}>
+        <main className="mx-auto flex min-h-screen max-w-3xl flex-col">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navigation />
+            <ToasterWithLimit />
+            <div className="flex flex-1 flex-col">{children}</div>
+            <Footer country={country!} />
+          </ThemeProvider>
+        </main>
       </body>
     </html>
   );

@@ -17,9 +17,6 @@ export default async function Page() {
   return (
     <div className="h-full">
       <div className="mx-auto max-w-3xl pt-10">
-        <h1 className="mb-8 text-4xl font-semibold">
-          Some words that I&apos;ve written beside codes
-        </h1>
         <div className="w-full space-y-8 rounded-lg pt-6">
           {blogs.map((blog) => (
             <div

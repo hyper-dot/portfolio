@@ -33,14 +33,6 @@ function SingleBlog() {
 export default function Loading() {
   return (
     <div className="mx-auto max-w-3xl space-y-9 pt-10">
-      <div className="mb-10 flex w-full justify-center gap-4">
-        <Skeleton className="h-8 w-1/3"></Skeleton>
-        <Skeleton className="h-8 w-2/6"></Skeleton>
-        <Skeleton className="h-8 w-3/4"></Skeleton>
-        <Skeleton className="h-8 w-1/6"></Skeleton>
-        <Skeleton className="h-8 w-3/4"></Skeleton>
-        <Skeleton className="h-8 w-3/4"></Skeleton>
-      </div>
       {Array.from({ length: 8 }).map((_, idx) => (
         <SingleBlog key={idx} />
       ))}

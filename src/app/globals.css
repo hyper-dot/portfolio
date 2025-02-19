@@ -51,7 +51,7 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
+    --chart-1: 220 69% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
@@ -73,21 +73,21 @@
 
 @keyframes scale-up {
   0% {
-    clip-path: circle(0% at 98% 5%);
+    clip-path: circle(0% at 69% 5%);
   }
 
   100% {
-    clip-path: circle(150% at 98% 5%);
+    clip-path: circle(150% at 69% 5%);
   }
 }
 
 @keyframes scale-down {
   0% {
-    clip-path: circle(150% at 98% 5%);
+    clip-path: circle(150% at 69% 5%);
   }
 
   100% {
-    clip-path: circle(0% at 98% 5%);
+    clip-path: circle(0% at 69% 5%);
   }
 }
 
@@ -137,7 +137,7 @@
 @media (max-width: 768px) {
   .background-div {
     background:
-      url(/orange.svg) 100% 100%/70% no-repeat,
+      url(/orange.svg) 100% 100%/69% no-repeat,
       url(/purple.svg) -2rem 10%/100% no-repeat;
     background-attachment: fixed, fixed;
   }
