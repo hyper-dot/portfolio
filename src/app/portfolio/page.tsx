@@ -18,7 +18,7 @@ const PortfolioSection = () => {
       <div className="container mx-auto px-6 lg:px-20">
         <h2 className="mb-12 text-center text-4xl font-bold">My Projects</h2>
         <div className="grid gap-12 lg:grid-cols-2">
-          {projects.map((item, idx) => (
+          {projects.map((item: any, idx: number) => (
             <Sheet key={idx}>
               <SheetTrigger>
                 <div className="group relative cursor-pointer rounded-md border shadow-lg">
@@ -62,7 +62,7 @@ const PortfolioSection = () => {
                 <div className="mt-6">
                   <h3 className="mb-2 text-lg font-semibold">Tech Stack</h3>
                   <div className="flex flex-wrap gap-2">
-                    {item.techStack.map((tech) => (
+                    {item.techStack.map((tech: any) => (
                       <Badge key={tech} variant="secondary">
                         {tech}
                       </Badge>
@@ -72,7 +72,7 @@ const PortfolioSection = () => {
                 <div className="mt-6">
                   <h3 className="mb-2 text-lg font-semibold">Key Features</h3>
                   <ul className="list-disc space-y-1 pl-5">
-                    {item.features.map((item, idx) => (
+                    {item.features.map((item: any, idx: number) => (
                       <li key={idx}>{item}</li>
                     ))}
                   </ul>

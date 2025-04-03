@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import HomeAnimation from "@/components/HomeAnimation";
+// import HomeAnimation from "@/components/HomeAnimation";
+import dynamic from "next/dynamic";
+const HomeAnimation = dynamic(() => import("@/components/HomeAnimation"));
 
 export default function Home() {
   return (
