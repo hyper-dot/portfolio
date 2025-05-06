@@ -1,5 +1,8 @@
 import MonsoonLogistics from "../../public/portfolio/monsoon-logistics.png";
 import EzBooks from "../../public/portfolio/ezbooks.png";
+import Snipverse from "../../public/portfolio/snipverse.png";
+import AICaller from "../../public/portfolio/aicaller.png";
+import ListingsSg from '../../public/portfolio/listings.png'
 
 export const projects = [
   {
@@ -36,22 +39,55 @@ export const projects = [
       "Easy-to-navigate landing page with interactive elements for shipment tracking.",
     ],
   },
-  /* {
-    thumbnail: EzBooks,
-    video: "/videos/taskmaster.mp4",
-    title: "Taskmaster",
+  {
+    // video: "/videos/monsoon-logistics.mp4",
+    thumbnail: Snipverse,
+    title: "Snipverse",
     description:
-      "Ez Books is an all-in-one platform for small businesses, simplifying operations like inventory management, sales and purchase tracking, and billing. Built with Next.js, React Query, and Redux Toolkit, it provides efficient dashboards and performance tracking, helping businesses streamline processes and focus on growth.",
-    techStack: ["Next.js", "Tanstack Query", "Shadcn UI", "Tailwind"],
-    liveLink: "https://ezbooks.rosanpaudel.com.np",
-    codeLink: "https://github.com/hyper-dot/books",
+      "Monsoon Logistics is a modern landing page designed for a logistics company, featuring dynamic Lottie animations and an AI-powered chatbot. Built with Next.js and Tailwind CSS, it provides a sleek, user-friendly experience, allowing visitors to easily access services, track shipments, and engage with the company through interactive elements.",
+    techStack: ["Next.js", "Tailwind", "Lottie", "OpenAI"],
+    liveLink: "https://sniverse.com",
+    // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
     features: [
-      "All-in-one platform for small businesses to manage inventory, sales, purchases, and billing.",
-      "Efficient dashboards for performance tracking and decision-making.",
-      "Built with Next.js for server-side rendering and optimized performance.",
-      "React Query efficient data fetching & caching.",
-      "Responsive design powered by Tailwind CSS for mobile-friendly user experience.",
+      "Dynamic Lottie animations for a modern, engaging user experience.",
+      "AI-powered chatbot integration for seamless user interaction.",
+      "Built with Next.js for optimized performance and scalability.",
+      "Responsive design with Tailwind CSS for a mobile-friendly interface.",
+      "Easy-to-navigate landing page with interactive elements for shipment tracking.",
     ],
-  } */
-  ,
+  },
+  {
+    // video: "/videos/monsoon-logistics.mp4",
+    thumbnail: AICaller,
+    title: "AICaller",
+    description:
+      "Monsoon Logistics is a modern landing page designed for a logistics company, featuring dynamic Lottie animations and an AI-powered chatbot. Built with Next.js and Tailwind CSS, it provides a sleek, user-friendly experience, allowing visitors to easily access services, track shipments, and engage with the company through interactive elements.",
+    techStack: ["Next.js", "Tailwind", "Lottie", "OpenAI"],
+    liveLink: "https://aicaller.com",
+    // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
+    features: [
+      "Dynamic Lottie animations for a modern, engaging user experience.",
+      "AI-powered chatbot integration for seamless user interaction.",
+      "Built with Next.js for optimized performance and scalability.",
+      "Responsive design with Tailwind CSS for a mobile-friendly interface.",
+      "Easy-to-navigate landing page with interactive elements for shipment tracking.",
+    ],
+  },
+  {
+    // video: "/videos/monsoon-logistics.mp4",
+    thumbnail: ListingsSg,
+    title: "ListingsSG",
+    description:
+      "Monsoon Logistics is a modern landing page designed for a logistics company, featuring dynamic Lottie animations and an AI-powered chatbot. Built with Next.js and Tailwind CSS, it provides a sleek, user-friendly experience, allowing visitors to easily access services, track shipments, and engage with the company through interactive elements.",
+    techStack: ["Next.js", "Tailwind", "Lottie", "OpenAI"],
+    liveLink: "https://listings.sg",
+    // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
+    features: [
+      "Dynamic Lottie animations for a modern, engaging user experience.",
+      "AI-powered chatbot integration for seamless user interaction.",
+      "Built with Next.js for optimized performance and scalability.",
+      "Responsive design with Tailwind CSS for a mobile-friendly interface.",
+      "Easy-to-navigate landing page with interactive elements for shipment tracking.",
+    ],
+  },
 ];
