@@ -40,24 +40,24 @@ export const projects = [
       "Redesigned landing page with improved user experience and conversion optimization",
     ],
   },
-  {
-    // video: "/videos/monsoon-logistics.mp4",
-    thumbnail: ListingsSg,
-    title: "ListingsSG",
-    description:
-      "ListingsSG is a comprehensive real estate platform for Singapore properties, featuring advanced filtering by MRT stations, schools, and locations. The platform enables users to upload listings while providing admin monitoring capabilities. It includes real-time chat with agents, auto-filling apartment details based on condominium information, and AI-powered title and description generation for enhanced user experience.",
-    techStack: ["Next.js", "Tailwind", "Socket.io", "OpenAI", "Singapore Location API", "Mongoose"],
-    liveLink: "https://listings.sg",
-    // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
-    features: [
-      "Advanced property filtering by nearest MRT stations, schools, and locations",
-      "Real-time chat functionality with property agents",
-      "Auto-filling apartment details based on condominium information",
-      "Integration with Singapore Location API for enhanced user experience",
-      "AI-powered title and description generation for property listings",
-      "Comprehensive admin dashboard for monitoring and managing listings",
-    ],
-  },
+  // {
+  //   // video: "/videos/monsoon-logistics.mp4",
+  //   thumbnail: ListingsSg,
+  //   title: "ListingsSG",
+  //   description:
+  //     "ListingsSG is a comprehensive real estate platform for Singapore properties, featuring advanced filtering by MRT stations, schools, and locations. The platform enables users to upload listings while providing admin monitoring capabilities. It includes real-time chat with agents, auto-filling apartment details based on condominium information, and AI-powered title and description generation for enhanced user experience.",
+  //   techStack: ["Next.js", "Tailwind", "Socket.io", "OpenAI", "Singapore Location API", "Mongoose"],
+  //   liveLink: "https://listings.sg",
+  //   // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
+  //   features: [
+  //     "Advanced property filtering by nearest MRT stations, schools, and locations",
+  //     "Real-time chat functionality with property agents",
+  //     "Auto-filling apartment details based on condominium information",
+  //     "Integration with Singapore Location API for enhanced user experience",
+  //     "AI-powered title and description generation for property listings",
+  //     "Comprehensive admin dashboard for monitoring and managing listings",
+  //   ],
+  // },
   {
     thumbnail: EzBooks,
     video: "/videos/ezbooks.mp4",
