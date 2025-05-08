@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 // import HomeAnimation from "@/components/HomeAnimation";
 import dynamic from "next/dynamic";
+import { FaWhatsapp } from "react-icons/fa";
 const HomeAnimation = dynamic(() => import("@/components/HomeAnimation"));
 
 export default function Home() {
@@ -53,6 +54,16 @@ export default function Home() {
             <Button variant="outline" size="icon" asChild>
               <a href="mailto:rozanpoudel@gmail.com" aria-label="Email">
                 <Mail className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild>
+              <a
+                href="https://wa.me/9779864175818"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp className="h-5 w-5" />
               </a>
             </Button>
           </div>
