@@ -2,17 +2,25 @@ import MonsoonLogistics from "../../public/portfolio/monsoon-logistics.png";
 import EzBooks from "../../public/portfolio/ezbooks.png";
 import Snipverse from "../../public/portfolio/snipverse.png";
 import AICaller from "../../public/portfolio/aicaller.png";
-import ListingsSg from '../../public/portfolio/listings.png'
+import ListingsSg from "../../public/portfolio/listings.png";
 
 export const projects = [
- 
   {
     // video: "/videos/monsoon-logistics.mp4",
     thumbnail: Snipverse,
     title: "Snipverse",
     description:
       "Snipverse is a Web3 social media platform built on the XPR network. I contributed to developing key features including group chat functionality, Facebook and Instagram-like stories, ads dashboard, analytics dashboard, and real-time chat capabilities.",
-    techStack: ["Next.js", "Tailwind", "Web3", "XPR Network", "Prisma", "PostgreSQL", "Supabase", "Stripe"],
+    techStack: [
+      "Next.js",
+      "Tailwind",
+      "Web3",
+      "XPR Network",
+      "Prisma",
+      "PostgreSQL",
+      "Supabase",
+      "Stripe",
+    ],
     liveLink: "https://snipverse.com",
     // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
     features: [
@@ -29,7 +37,14 @@ export const projects = [
     title: "AICaller",
     description:
       "AICaller is an AI-powered call management platform that allows users to purchase phone numbers and assign them to AI agents for handling both inbound and outbound calls. The platform enables users to create and manage call campaigns with automated AI interactions. I contributed by developing a new landing page and resolving critical issues with the inbound and outbound call functionality.",
-    techStack: ["Next.js", "Tailwind", "Twilio", "Eleven Labs", "React", "Node.js"],
+    techStack: [
+      "Next.js",
+      "Tailwind",
+      "Twilio",
+      "Eleven Labs",
+      "React",
+      "Node.js",
+    ],
     liveLink: "https://aicaller.com",
     // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
     features: [
@@ -40,24 +55,31 @@ export const projects = [
       "Redesigned landing page with improved user experience and conversion optimization",
     ],
   },
-  // {
-  //   // video: "/videos/monsoon-logistics.mp4",
-  //   thumbnail: ListingsSg,
-  //   title: "ListingsSG",
-  //   description:
-  //     "ListingsSG is a comprehensive real estate platform for Singapore properties, featuring advanced filtering by MRT stations, schools, and locations. The platform enables users to upload listings while providing admin monitoring capabilities. It includes real-time chat with agents, auto-filling apartment details based on condominium information, and AI-powered title and description generation for enhanced user experience.",
-  //   techStack: ["Next.js", "Tailwind", "Socket.io", "OpenAI", "Singapore Location API", "Mongoose"],
-  //   liveLink: "https://listings.sg",
-  //   // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
-  //   features: [
-  //     "Advanced property filtering by nearest MRT stations, schools, and locations",
-  //     "Real-time chat functionality with property agents",
-  //     "Auto-filling apartment details based on condominium information",
-  //     "Integration with Singapore Location API for enhanced user experience",
-  //     "AI-powered title and description generation for property listings",
-  //     "Comprehensive admin dashboard for monitoring and managing listings",
-  //   ],
-  // },
+  {
+    // video: "/videos/monsoon-logistics.mp4",
+    thumbnail: ListingsSg,
+    title: "ListingsSG",
+    description:
+      "ListingsSG is a comprehensive real estate platform for Singapore properties, featuring advanced filtering by MRT stations, schools, and locations. The platform enables users to upload listings while providing admin monitoring capabilities. It includes real-time chat with agents, auto-filling apartment details based on condominium information, and AI-powered title and description generation for enhanced user experience.",
+    techStack: [
+      "Next.js",
+      "Tailwind",
+      "Socket.io",
+      "OpenAI",
+      "Singapore Location API",
+      "Mongoose",
+    ],
+    liveLink: "https://listings.sg",
+    // codeLink: "https://github.com/hyper-dot/monsoon-logistics",
+    features: [
+      "Advanced property filtering by nearest MRT stations, schools, and locations",
+      "Real-time chat functionality with property agents",
+      "Auto-filling apartment details based on condominium information",
+      "Integration with Singapore Location API for enhanced user experience",
+      "AI-powered title and description generation for property listings",
+      "Comprehensive admin dashboard for monitoring and managing listings",
+    ],
+  },
   {
     thumbnail: EzBooks,
     video: "/videos/ezbooks.mp4",
