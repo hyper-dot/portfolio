@@ -34,7 +34,7 @@ export default function page() {
                     src={item.logo}
                     alt={item.company}
                     className={cn(
-                      "mr-6 h-12 w-12 rounded-full",
+                      "mr-6 h-12 w-12 rounded-full border-2",
                       item.company === "Metalogic Software"
                         ? "h-[2.6rem] w-[2.6rem]"
                         : "",

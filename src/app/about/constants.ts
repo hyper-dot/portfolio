@@ -1,16 +1,25 @@
 export const data = {
   workExperience: [
     {
-      logo: "/sand-console.jpg",
+      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGbHpMSZeKkEw/company-logo_200_200/company-logo_200_200/0/1630573974203/frosticsatellite_logo?e=1753315200&v=beta&t=3r4oOzdCCmmqtLK8RFwU96amX4YDTLiS4YRIXhvI7Iw",
+      location: "USA (Remote)",
+      company: "Forstic Satellite",
+      url: "https://snipverse.com",
+      title: "Frontend Developer (Next.js)",
+      from: "November 2024",
+      to: "Present",
+    },
+    {
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQErNJFYuuW7tQ/company-logo_200_200/company-logo_200_200/0/1690836777977/sandconsole_logo?e=1753315200&v=beta&t=r4cSYj-a-8CZRmd89fdkavpbAQyoIPDn7T-Rdn_Riq8",
       location: "Kathmandu Nepal (remote)",
       company: "Sand Console",
       url: "https://sandconsole.com",
       title: "Frontend Developer (Next.js)",
       from: "July 2024",
-      to: "Present",
+      to: "December 2024",
     },
     {
-      logo: "https://avatars.githubusercontent.com/u/140021323?s=100&v=10",
+      logo: "https://media.licdn.com/dms/image/v2/C4D0BAQFVBaWozNJXfg/company-logo_200_200/company-logo_200_200/0/1630545258536/startuphire_logo?e=1753315200&v=beta&t=6-6KC1f63vojkrCbc-lVwSnY-jI6JQEgjqiJBmObrHs",
       location: "California USA (remote)",
       company: "StartupHire",
       title: "Frontend Developer",
