@@ -1,14 +1,14 @@
 export const data = {
   workExperience: [
-    {
-      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGbHpMSZeKkEw/company-logo_200_200/company-logo_200_200/0/1630573974203/frosticsatellite_logo?e=1753315200&v=beta&t=3r4oOzdCCmmqtLK8RFwU96amX4YDTLiS4YRIXhvI7Iw",
-      location: "USA (Remote)",
-      company: "Forstic Satellite",
-      url: "https://snipverse.com",
-      title: "Frontend Developer (Next.js)",
-      from: "November 2024",
-      to: "Present",
-    },
+    // {
+    //   logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGbHpMSZeKkEw/company-logo_200_200/company-logo_200_200/0/1630573974203/frosticsatellite_logo?e=1753315200&v=beta&t=3r4oOzdCCmmqtLK8RFwU96amX4YDTLiS4YRIXhvI7Iw",
+    //   location: "USA (Remote)",
+    //   company: "Forstic Satellite",
+    //   url: "https://snipverse.com",
+    //   title: "Frontend Developer (Next.js)",
+    //   from: "November 2024",
+    //   to: "Present",
+    // },
     {
       logo: "https://media.licdn.com/dms/image/v2/D560BAQErNJFYuuW7tQ/company-logo_200_200/company-logo_200_200/0/1690836777977/sandconsole_logo?e=1753315200&v=beta&t=r4cSYj-a-8CZRmd89fdkavpbAQyoIPDn7T-Rdn_Riq8",
       location: "Kathmandu Nepal (remote)",
