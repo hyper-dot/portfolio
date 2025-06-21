@@ -12,7 +12,7 @@ export default async function sitemap({
   await connectdb();
   const blogs = await Blog.find().limit(50000);
   return blogs.map((blog) => ({
-    url: `${BASE_URL}/product/${blog.slug}`,
+    url: `${BASE_URL}/blogs/${blog.slug}`,
     lastModified: blog.updatedAt,
   }));
 }
