@@ -68,6 +68,15 @@ export default function Home() {
             </Button>
           </div>
         </div>
+        <script
+          src="https://aicaller.com/embed/call-widget.min.js"
+          async
+        ></script>
+        {/* @ts-expect-error - This is valid custom element */}
+        <ai-caller-widget
+          data-agent-id="68555d3192110c3fe4419d58"
+          data-api-key="sk_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzdkNTEyZWY4MDBjZTJkYmNkZGNlYWEiLCJrZXlJZCI6IjY4NTU2NGIxYTYwZTM2ODg2Yzc5NzIyNyIsIm5hbWUiOiJhcGkga2V5IGZvciBob21lIHBhZ2Ugd2lkZ2V0IiwidHlwZSI6ImFwaV9rZXkiLCJpYXQiOjE3NTA0MjY4MDF9.slmCosUCSmNzjOkZp6YeBNLiwIOgZC4H2AUkpmRUYlY"
+        />
       </motion.div>
     </div>
   );
