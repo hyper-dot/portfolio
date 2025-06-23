@@ -6,16 +6,16 @@ import { Button } from "@/components/ui/button";
 export default function TestPage() {
   const generateCSVData = () => {
     const dummyData = [
-      { name: "John Doe", email: "john.doe@example.com", phone: "+1-555-0101" },
-      { name: "Jane Smith", email: "jane.smith@example.com", phone: "+1-555-0102" },
-      { name: "Michael Johnson", email: "michael.johnson@example.com", phone: "+1-555-0103" },
-      { name: "Emily Davis", email: "emily.davis@example.com", phone: "+1-555-0104" },
-      { name: "David Wilson", email: "david.wilson@example.com", phone: "+1-555-0105" },
-      { name: "Sarah Brown", email: "sarah.brown@example.com", phone: "+1-555-0106" },
-      { name: "Chris Miller", email: "chris.miller@example.com", phone: "+1-555-0107" },
-      { name: "Jessica Taylor", email: "jessica.taylor@example.com", phone: "+1-555-0108" },
-      { name: "Robert Anderson", email: "robert.anderson@example.com", phone: "+1-555-0109" },
-      { name: "Amanda Martinez", email: "amanda.martinez@example.com", phone: "+1-555-0110" }
+      { name: "John Doe", email: "john.doe@example.com", phone: "+15550101" },
+      { name: "Jane Smith", email: "jane.smith@example.com", phone: "+15550102" },
+      { name: "Michael Johnson", email: "michael.johnson@example.com", phone: "+15550103" },
+      { name: "Emily Davis", email: "emily.davis@example.com", phone: "+15550104" },
+      { name: "David Wilson", email: "david.wilson@example.com", phone: "+15550105" },
+      { name: "Sarah Brown", email: "sarah.brown@example.com", phone: "+15550106" },
+      { name: "Chris Miller", email: "chris.miller@example.com", phone: "+15550107" },
+      { name: "Jessica Taylor", email: "jessica.taylor@example.com", phone: "+15550108" },
+      { name: "Robert Anderson", email: "robert.anderson@example.com", phone: "+15550109" },
+      { name: "Amanda Martinez", email: "amanda.martinez@example.com", phone: "+15550110" }
     ];
 
     // Create CSV header
@@ -23,7 +23,7 @@ export default function TestPage() {
     
     // Create CSV rows
     const csvRows = dummyData.map(row => 
-      `"${row.name}","${row.email}","${row.phone}"`
+      `${row.name},${row.email},${row.phone}`
     ).join("\n");
     
     return csvHeader + csvRows;
